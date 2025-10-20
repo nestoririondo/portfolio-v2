@@ -1,6 +1,5 @@
 import { Code, Plug, Wrench } from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
-import { MotionSection } from "../MotionSection";
 import { motion } from "framer-motion";
 import styles from "../../styles/components/Services.module.css";
 
@@ -26,7 +25,6 @@ export function Services() {
   const { t } = useLanguage();
 
   return (
-    <MotionSection>
       <section id="services" className={styles.section}>
         {/* Background with subtle pattern */}
         <div className={styles.backgroundDecoration}></div>
@@ -37,7 +35,7 @@ export function Services() {
             className={styles.titleSection}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-150px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <h2 className={styles.title}>{t("services.title")}</h2>
@@ -48,12 +46,8 @@ export function Services() {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
                   className={styles.serviceCard}
                 >
                   <div className={styles.serviceIcon}>
@@ -63,23 +57,16 @@ export function Services() {
                   <p className={styles.serviceDescription}>
                     {t(service.descriptionKey)}
                   </p>
-                </motion.div>
+                </div>
               );
             })}
           </div>
 
           {/* Visual separator */}
-          <motion.div
-            className={styles.separator}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 1.0 }}
-          >
+          <div className={styles.separator}>
             <div className={styles.separatorLine}></div>
-          </motion.div>
+          </div>
         </div>
       </section>
-    </MotionSection>
   );
 }

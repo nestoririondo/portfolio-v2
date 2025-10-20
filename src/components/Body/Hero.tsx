@@ -15,11 +15,11 @@ export function Hero() {
     <section id="hero" className={styles.heroSection}>
       {/* Background Image Container */}
       <div className={styles.imageContainer}>
-        <ImageWithFallback
+        {/* <ImageWithFallback
           src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5fDB8MXxhbGx8fHx8fHx8fDE2MjM4MDY4OTg&ixlib=rb-4.0.3&q=80&w=1920"
           alt="Modern workspace"
           className={styles.heroImage}
-        />
+        />fdsfasdfadfdfsdafdafdsfsdfadfdfadfadsf */}
         {/* Multiple overlay layers for depth */}
         <div className={styles.overlay1}></div>
         <div className={styles.overlay2}></div>

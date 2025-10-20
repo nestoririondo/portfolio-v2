@@ -1,6 +1,5 @@
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import { useLanguage } from "../../contexts/LanguageContext";
-import { MotionSection } from "../MotionSection";
 import { motion } from "framer-motion";
 import styles from "../../styles/components/About.module.css";
 
@@ -8,7 +7,6 @@ export function About() {
   const { t } = useLanguage();
 
   return (
-    <MotionSection>
       <section id="about" className={styles.section}>
         {/* Background */}
         <div className={styles.backgroundDecoration}></div>
@@ -92,6 +90,5 @@ export function About() {
           </div>
         </div>
       </section>
-    </MotionSection>
   );
 }

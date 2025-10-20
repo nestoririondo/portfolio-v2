@@ -1,5 +1,4 @@
 import { Target, MessageSquare, Award, ShieldCheck } from "lucide-react";
-import { MotionSection } from "../MotionSection";
 import { motion } from "framer-motion";
 import { useLanguage } from "../../contexts/LanguageContext";
 import styles from "../../styles/components/Approach.module.css";
@@ -31,10 +30,8 @@ export function Approach() {
   const { t } = useLanguage();
 
   return (
-    <MotionSection>
       <section id="approach" className={styles.section}>
         {/* Background decoration */}
-        {/* <div className={styles.backgroundDecoration}></div> */}
 
         <div className={styles.container}>
           <motion.div
@@ -86,6 +83,5 @@ export function Approach() {
           </motion.div>
         </div>
       </section>
-    </MotionSection>
   );
 }

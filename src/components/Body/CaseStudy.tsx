@@ -1,6 +1,5 @@
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import { CheckCircle } from "lucide-react";
-import { MotionSection } from "../MotionSection";
 import { motion } from "framer-motion";
 import { useLanguage } from "../../contexts/LanguageContext";
 import styles from "../../styles/components/CaseStudy.module.css";
@@ -8,7 +7,6 @@ import styles from "../../styles/components/CaseStudy.module.css";
 export function CaseStudy() {
   const { t } = useLanguage();
   return (
-    <MotionSection>
       <section id="case-study" className={styles.section}>
         {/* Background decoration */}
         <div className={styles.backgroundDecoration}></div>
@@ -112,6 +110,5 @@ export function CaseStudy() {
           </div>
         </div>
       </section>
-    </MotionSection>
   );
 }

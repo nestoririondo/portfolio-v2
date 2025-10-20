@@ -252,6 +252,31 @@ section, footer {
   position: relative;
 }
 
+/* Mobile viewport adjustments */
+@media (max-width: 768px) {
+  section, footer {
+    min-height: 100svh !important;
+    height: auto !important;
+    padding: 2rem 1rem !important;
+    justify-content: flex-start !important;
+  }
+  
+  body {
+    height: 100svh;
+  }
+}
+
+/* Chrome-specific fix for scroll snap overshooting */
+@supports (-webkit-appearance: none) and (not (-moz-appearance: none)) {
+  body, main {
+    scroll-snap-type: y proximity !important;
+  }
+  
+  section, footer {
+    scroll-snap-stop: normal !important;
+  }
+}
+
 
 /* Custom animations */
 @keyframes fade-in {
