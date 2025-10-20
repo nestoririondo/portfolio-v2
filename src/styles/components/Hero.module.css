@@ -1,4 +1,10 @@
 /* BRUTALIST HERO SECTION */
+.heroWrapper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
 .heroSection {
   height: 100vh;
   min-height: 100vh;
@@ -94,8 +100,6 @@
 }
 
 .ctaButton:hover svg {
-  /* transform: translateX(6px); */
-  /* change size */
   scale: 1.3;
 }
 
@@ -121,20 +125,6 @@
   letter-spacing: 0.1em;
 }
 
-
-/* Grid overlay for visual interest */
-.gridOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: -1;
-}
 
 /* Typography emphasis */
 
@@ -162,10 +152,6 @@
     gap: 3rem;
   }
 
-
-  .gridOverlay {
-    background-size: 20px 20px;
-  }
 }
 
 /* Dark mode */
@@ -186,20 +172,4 @@
   color: var(--brand-white);
 }
 
-.dark .gridOverlay {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.05) 1px,
-      transparent 1px
-    ),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-}
 
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
-  }
-}
