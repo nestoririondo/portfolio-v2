@@ -1,10 +1,11 @@
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, ReactNode, useCallback } from 'react';
 
 type Theme = 'light' | 'dark';
 
 interface ThemeContextType {
   theme: Theme;
   toggleTheme: () => void;
+  toggleThemeWithTransition: (animationFn?: () => void) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -30,8 +31,22 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setTheme(prev => prev === 'light' ? 'dark' : 'light');
   };
 
+  const toggleThemeWithTransition = useCallback((animationFn?: () => void) => {
+    if (animationFn) {
+      animationFn();
+    }
+
+    if ('startViewTransition' in document) {
+      (document as any).startViewTransition(() => {
+        setTheme(prev => prev === 'light' ? 'dark' : 'light');
+      });
+    } else {
+      setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    }
+  }, []);
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, toggleThemeWithTransition }}>
       {children}
     </ThemeContext.Provider>
   );

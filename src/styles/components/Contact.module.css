@@ -13,6 +13,7 @@
 
 .container {
   max-width: 800px;
+  width: 90%;
   margin: 0 auto;
   flex: 1;
   display: flex;
@@ -54,6 +55,7 @@
 .formGroup {
   border-bottom: 4px solid var(--brand-primary);
   position: relative;
+  margin-bottom: 1.5rem;
 }
 
 .formGroup:last-child {
@@ -64,7 +66,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--brand-gray-medium);
@@ -82,52 +84,72 @@
 .input,
 .textarea {
   width: 100%;
-  padding: 1.5rem 1.5rem 1.5rem 140px;
+  padding: 0.5rem 1rem 0.5rem 140px;
   font-family: var(--font-body);
   font-size: 1rem;
   color: var(--brand-primary);
-  background-color: transparent;
-  border: none;
+  background-color: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   outline: none;
   transition: all 0.2s ease;
 }
 
 .input:focus,
 .textarea:focus {
-  background-color: var(--brand-gray-light);
+  background-color: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .textarea {
   resize: none;
-  min-height: 120px;
+  min-height: 60px;
   font-family: var(--font-body);
+  line-height: 1.4;
 }
 
-.submitButton {
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--brand-gray-medium);
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.input:hover,
+.textarea:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.ctaButton {
   width: 100%;
-  background-color: var(--brand-primary);
-  color: var(--brand-white);
-  padding: 2rem;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  position: relative;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  padding: 2rem !important;
+  font-family: var(--font-mono) !important;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  border: 3px solid #000000 !important;
+  border-radius: 0 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 6px 6px 0 #0066cc !important;
+  position: relative !important;
+  text-decoration: none !important;
+  outline: none !important;
 }
 
-.submitButton:hover {
-  background-color: var(--brand-accent);
-  transform: translate(-4px, -4px);
-  box-shadow: 4px 4px 0 var(--brand-primary);
+.ctaButton:hover {
+  transform: translate(3px, 3px) !important;
+  box-shadow: 3px 3px 0 #0066cc !important;
+  background-color: #0066cc !important;
+  border-color: #0066cc !important;
+  color: #000000 !important;
 }
 
-.submitButton:active {
-  transform: translate(0, 0);
-  box-shadow: 0 0 0 var(--brand-primary);
+.ctaButton:active {
+  transform: translate(6px, 6px) !important;
+  box-shadow: 0 0 0 #0066cc !important;
 }
 
 /* Footer integrated into contact section */
@@ -224,7 +246,9 @@
 
   .input,
   .textarea {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    min-height: 50px;
   }
 
   .submitButton {

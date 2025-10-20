@@ -1,11 +1,10 @@
-import { Moon, Sun, Globe, Terminal } from "lucide-react";
-import { useTheme } from "../contexts/ThemeContext";
+import { Globe, MessageCircle } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "framer-motion";
+import { CircleBlurThemeToggle } from "./CircleBlurThemeToggle";
 import styles from "../styles/components/Header.module.css";
 
 export function Header() {
-  const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
 
   const cycleLanguage = () => {
@@ -43,11 +42,6 @@ export function Header() {
         </div>
 
         <div className={styles.buttonsContainer}>
-          <button onClick={scrollToContact} className={styles.contactButton}>
-            <Terminal />
-            <div className={styles.contactText}>Contact</div>
-          </button>
-
           <button
             onClick={cycleLanguage}
             className={styles.iconButton}
@@ -57,12 +51,14 @@ export function Header() {
             {language.toUpperCase()}
           </button>
 
-          <button
-            onClick={toggleTheme}
-            className={styles.iconButton}
+          <CircleBlurThemeToggle 
+            start="center"
             title={t("theme.toggle")}
-          >
-            {theme === "light" ? <Moon /> : <Sun />}
+          />
+
+          <button onClick={scrollToContact} className={styles.contactButton}>
+            <MessageCircle />
+            <div className={styles.contactText}>Contact</div>
           </button>
         </div>
       </div>

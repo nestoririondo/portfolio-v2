@@ -14,6 +14,7 @@ export const es = {
   "hero.subtitle":
     "Cuando las plantillas no pueden manejar lo que necesitas—integraciones de API, características personalizadas y soluciones reales",
   "hero.cta": "Hablemos sobre tu proyecto",
+  "hero.status": "Actualmente disponible para proyectos",
   "hero.features.custom": "Código Personalizado",
   "hero.features.fast": "Entrega Rápida",
   "hero.features.modern": "Diseño Moderno",

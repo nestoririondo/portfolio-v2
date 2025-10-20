@@ -92,7 +92,7 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 className={styles.input}
-                placeholder="Your full name"
+                placeholder="What should I call you?"
               />
             </div>
 
@@ -108,7 +108,7 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 className={styles.input}
-                placeholder="your.email@company.com"
+                placeholder="Where can I reach you?"
               />
             </div>
 
@@ -122,7 +122,7 @@ export function Contact() {
                 value={formData.company}
                 onChange={handleChange}
                 className={styles.input}
-                placeholder="Your company (optional)"
+                placeholder="Who do you work with? (optional)"
               />
             </div>
 
@@ -138,11 +138,11 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 className={styles.textarea}
-                placeholder="Tell me about your project requirements, timeline, budget, or specific features you need..."
+                placeholder="What's your dream project? Tell me about your goals, timeline, and what success looks like..."
               />
             </div>
 
-            <button type="submit" className={styles.submitButton}>
+            <button type="submit" className={styles.ctaButton}>
               Send Message
             </button>
           </motion.form>

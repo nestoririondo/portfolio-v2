@@ -1,5 +1,6 @@
 import { useLanguage } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
+import { PulsingStatusLight } from "../PulsingStatusLight";
 import styles from "../../styles/components/About.module.css";
 
 const skills = [
@@ -54,7 +55,11 @@ export function About() {
             </div>
 
             <div className={styles.statusRow}>
-              <div className={styles.statusDot}></div>
+              <PulsingStatusLight 
+                variant="available" 
+                animation="pulse" 
+                size="medium" 
+              />
               <span className={styles.statusText}>
                 Currently accepting select projects
               </span>

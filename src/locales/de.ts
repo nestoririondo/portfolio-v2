@@ -14,6 +14,7 @@ export const de = {
   "hero.subtitle":
     "Wenn Templates nicht ausreichen—API-Integrationen, individuelle Features und echte Lösungen",
   "hero.cta": "Lass uns über dein Projekt sprechen",
+  "hero.status": "Derzeit verfügbar für Projekte",
   "hero.features.custom": "Individueller Code",
   "hero.features.fast": "Schnelle Lieferung",
   "hero.features.modern": "Modernes Design",

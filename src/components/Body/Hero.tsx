@@ -1,6 +1,7 @@
-import { ArrowRight, Terminal } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
+import { PulsingStatusLight } from "../PulsingStatusLight";
 import styles from "../../styles/components/Hero.module.css";
 
 export function Hero() {
@@ -22,9 +23,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          Custom websites
-          <span className={styles.titleAccent}>that actually work</span>
-          for your business
+          {t("hero.title")}
         </motion.h1>
 
         <motion.p
@@ -43,15 +42,24 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         >
           <button onClick={scrollToContact} className={styles.ctaButton}>
-            <Terminal />
-            {t("hero.cta")}
-            <ArrowRight />
+            <MessageCircle />
+            <span className={styles.ctaMainText}>{t("hero.cta")}</span>
+            <ArrowRight className={styles.ctaArrow} />
           </button>
 
-          <div className={styles.statusIndicator}>
-            <div className={styles.statusDot}></div>
-            Available for select projects
-          </div>
+          <motion.div
+            className={styles.statusIndicator}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1, ease: 'backIn' }}
+          >
+            <PulsingStatusLight
+              variant="available"
+              animation="breathe"
+              size="medium"
+            />
+            {t("hero.status")}
+          </motion.div>
         </motion.div>
       </div>
     </section>

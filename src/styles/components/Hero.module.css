@@ -16,7 +16,7 @@
 }
 
 .content {
-  max-width: 800px;
+  /* max-width: 800px; */
   width: 100%;
 }
 
@@ -44,52 +44,73 @@
 .ctaSection {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .ctaButton {
-  background-color: var(--brand-primary);
-  color: var(--brand-white);
-  padding: 1.5rem 3rem;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  transition: all 0.2s ease;
-  box-shadow: 8px 8px 0 var(--brand-accent);
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  padding: 1.5rem 3rem !important;
+  font-family: var(--font-mono) !important;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  border: 3px solid #000000 !important;
+  border-radius: 0 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 6px 6px 0 #0066cc !important;
+  position: relative !important;
+  overflow: visible !important;
+  min-width: 250px !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  outline: none !important;
 }
 
 .ctaButton:hover {
-  transform: translate(4px, 4px);
-  box-shadow: 4px 4px 0 var(--brand-accent);
+  transform: translate(3px, 3px) !important;
+  box-shadow: 3px 3px 0 #0066cc !important;
+  background-color: #0066cc !important;
+  border-color: #0066cc !important;
+  color: #000000 !important;
 }
 
 .ctaButton:active {
-  transform: translate(8px, 8px);
-  box-shadow: 0 0 0 var(--brand-accent);
+  transform: translate(6px, 6px) !important;
+  box-shadow: 0 0 0 #0066cc !important;
 }
 
 .ctaButton svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  transition: transform 0.2s ease;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.3s ease;
 }
 
 .ctaButton:hover svg {
-  transform: translateX(4px);
+  transform: translateX(6px);
+}
+
+.ctaMainText {
+  font-weight: 700;
+  position: relative;
+}
+
+.ctaArrow {
+  flex-shrink: 0;
 }
 
 /* Status indicator */
 .statusIndicator {
   display: flex;
   align-items: center;
+  margin: 0 auto;
   gap: 0.75rem;
   font-family: var(--font-mono);
   font-size: 0.875rem;
@@ -113,8 +134,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
@@ -148,13 +168,9 @@
   .ctaSection {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 3rem;
   }
 
-  .ctaButton {
-    padding: 1.25rem 2rem;
-    font-size: 0.875rem;
-  }
 
   .gridOverlay {
     background-size: 20px 20px;
@@ -180,13 +196,16 @@
 }
 
 .dark .gridOverlay {
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {

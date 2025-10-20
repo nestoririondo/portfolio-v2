@@ -12,6 +12,7 @@ export const en = {
   'hero.title': 'Custom websites that actually work for your business',
   'hero.subtitle': 'When templates can\'t handle what you need—API integrations, custom features, and real solutions',
   'hero.cta': 'Let\'s talk about your project',
+  'hero.status': 'Currently available for projects',
   'hero.features.custom': 'Custom Code',
   'hero.features.fast': 'Fast Delivery',
   'hero.features.modern': 'Modern Design',
