@@ -1,7 +1,7 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { PulsingStatusLight } from "../PulsingStatusLight";
+import { StatusIndicator } from "../StatusIndicator";
 import styles from "../../styles/components/Hero.module.css";
 
 export function Hero() {
@@ -53,9 +53,8 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1, ease: 'backIn' }}
           >
-            <PulsingStatusLight
-              variant="available"
-              animation="breathe"
+            <StatusIndicator
+              status="available"
               size="medium"
             />
             {t("hero.status")}

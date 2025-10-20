@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { toast } from "sonner";
+import { Checkmark } from "react-checkmark";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { MotionSection } from "../MotionSection";
 import { motion } from "framer-motion";
@@ -25,16 +26,31 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(t("contact.form.success"));
+    toast.custom(() => (
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        gap: '12px', 
+        padding: '16px', 
+        background: 'white', 
+        border: '1px solid #e5e7eb', 
+        borderRadius: '8px',
+        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+      }}>
+        <Checkmark size="medium" color="#10b981" />
+        <span>{t("contact.form.success")}</span>
+      </div>
+    ));
     setFormData({ name: "", email: "", company: "", message: "" });
   };
 
   const autoResizeTextarea = () => {
     if (textareaRef.current) {
-      textareaRef.current.style.height = "120px";
+      textareaRef.current.style.height = "60px";
       const scrollHeight = textareaRef.current.scrollHeight;
-      const minHeight = 120;
-      const newHeight = Math.max(scrollHeight, minHeight);
+      const minHeight = 60;
+      const maxHeight = 300;
+      const newHeight = Math.max(Math.min(scrollHeight, maxHeight), minHeight);
       textareaRef.current.style.height = `${newHeight}px`;
     }
   };
@@ -92,7 +108,6 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 className={styles.input}
-                placeholder="What should I call you?"
               />
             </div>
 
@@ -108,7 +123,6 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 className={styles.input}
-                placeholder="Where can I reach you?"
               />
             </div>
 
@@ -122,13 +136,12 @@ export function Contact() {
                 value={formData.company}
                 onChange={handleChange}
                 className={styles.input}
-                placeholder="Who do you work with? (optional)"
               />
             </div>
 
             <div className={styles.formGroup}>
               <label htmlFor="message" className={styles.label}>
-                Project
+                What do you want to build?
               </label>
               <textarea
                 ref={textareaRef}
@@ -138,7 +151,6 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 className={styles.textarea}
-                placeholder="What's your dream project? Tell me about your goals, timeline, and what success looks like..."
               />
             </div>
 

@@ -1,6 +1,5 @@
 /* BRUTALIST CONTACT SECTION */
 .section {
-  height: 100vh;
   min-height: 100vh;
   scroll-snap-align: start;
   display: flex;
@@ -9,6 +8,7 @@
   background-color: var(--brand-white);
   padding: 2rem;
   position: relative;
+  overflow-y: auto;
 }
 
 .container {
@@ -63,19 +63,18 @@
 }
 
 .label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0.5rem 1rem;
+  position: static;
+  border: none;
+  border-bottom: 2px solid var(--brand-primary);
+  min-width: auto;
+  width: 100%;
+  padding: 0.75rem 1rem;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--brand-gray-medium);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   background-color: var(--brand-gray-light);
-  border-right: 4px solid var(--brand-primary);
-  border-bottom: 4px solid var(--brand-primary);
-  min-width: 120px;
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -84,7 +83,7 @@
 .input,
 .textarea {
   width: 100%;
-  padding: 0.5rem 1rem 0.5rem 140px;
+  padding: 1rem;
   font-family: var(--font-body);
   font-size: 1rem;
   color: var(--brand-primary);
@@ -103,8 +102,10 @@
 .textarea {
   resize: none;
   min-height: 60px;
+  max-height: 300px;
   font-family: var(--font-body);
   line-height: 1.4;
+  overflow-y: auto;
 }
 
 .input::placeholder,
@@ -235,19 +236,11 @@
   }
 
   .label {
-    position: static;
-    border: none;
-    border-bottom: 2px solid var(--brand-primary);
-    min-width: auto;
-    width: 100%;
-    padding: 0.75rem 1rem;
     font-size: 0.625rem;
   }
 
   .input,
   .textarea {
-    padding: 1.5rem 1rem;
-    font-size: 1rem;
     min-height: 50px;
   }
 

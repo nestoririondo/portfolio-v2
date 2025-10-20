@@ -9,7 +9,6 @@ import { useScrollHash } from "../hooks/useScrollHash";
 import styles from "../styles/components/Body.module.css";
 
 export const Body = () => {
-  // This hook will automatically update the URL hash based on scroll position
   useScrollHash();
 
   return (

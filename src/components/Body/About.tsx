@@ -1,6 +1,6 @@
 import { useLanguage } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { PulsingStatusLight } from "../PulsingStatusLight";
+import { StatusIndicator } from "../StatusIndicator";
 import styles from "../../styles/components/About.module.css";
 
 const skills = [
@@ -55,9 +55,8 @@ export function About() {
             </div>
 
             <div className={styles.statusRow}>
-              <PulsingStatusLight 
-                variant="available" 
-                animation="pulse" 
+              <StatusIndicator 
+                status="available" 
                 size="medium" 
               />
               <span className={styles.statusText}>
