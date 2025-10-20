@@ -251,7 +251,7 @@ section, footer {
     min-height: 100svh !important;
     height: auto !important;
     padding: 2rem 1rem !important;
-    justify-content: flex-start !important;;
+    justify-content: flex-start !important;
   }
   
   body {
@@ -301,18 +301,6 @@ section, footer {
   }
 }
 
-.animate-fade-in {
-  animation: fade-in 1s ease-out;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
-}
 
 /* Smooth transitions for theme changes */
 * {
@@ -331,42 +319,4 @@ button:disabled {
   opacity: 0.5;
 }
 
-/* Shared CTA button style */
-.cta-button {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  padding: 1.5rem 3rem !important;
-  font-family: var(--font-mono) !important;
-  font-size: 1rem !important;
-  font-weight: 800 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
-  border: 3px solid #000000 !important;
-  border-radius: 0 !important;
-  cursor: pointer !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 1rem !important;
-  transition: all 0.2s ease !important;
-  box-shadow: 6px 6px 0 #0066cc !important;
-  position: relative !important;
-  overflow: visible !important;
-  min-width: 250px !important;
-  justify-content: center !important;
-  text-decoration: none !important;
-  outline: none !important;
-}
-
-.cta-button:hover {
-  transform: translate(3px, 3px) !important;
-  box-shadow: 3px 3px 0 #0066cc !important;
-  background-color: #0066cc !important;
-  border-color: #0066cc !important;
-  color: #000000 !important;
-}
-
-.cta-button:active {
-  transform: translate(6px, 6px) !important;
-  box-shadow: 0 0 0 #0066cc !important;
-}
 
