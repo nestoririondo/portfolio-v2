@@ -1,0 +1,88 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  backdrop-filter: blur(10px);
+  background-color: rgba(250, 250, 250, 0.1);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 500;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logoYellow {
+  color: #ffbd59;
+}
+
+.logoGray {
+  color: var(--foreground);
+}
+
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contactButton {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background: #ffbd59;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.375rem;
+  font-weight: 500;
+}
+
+.contactButton:hover {
+  transform: scale(1.05);
+}
+
+.iconButton {
+  background: transparent;
+  border: none;
+  color: var(--foreground);
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.iconButton:hover {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.iconButton svg {
+  width: 1rem;
+  height: 1rem;
+}

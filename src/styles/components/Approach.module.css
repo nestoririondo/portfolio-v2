@@ -1,0 +1,127 @@
+.section {
+  height: 100vh;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 1.5rem;
+  background-color: var(--background);
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundDecoration {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 189, 89, 0.05);
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #ffbd59;
+  margin-bottom: 1rem;
+}
+
+.titleUnderline {
+  width: 5rem;
+  height: 0.25rem;
+  background-color: #ffbd59;
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+.principlesGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.principleCard {
+  text-align: center;
+}
+
+.principleIcon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background-color: #ffbd59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.principleCard:hover .principleIcon {
+  transform: scale(1.1);
+}
+
+.principleIcon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: white;
+}
+
+.principleTitle {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.principleCard:hover .principleTitle {
+  color: #ffbd59;
+}
+
+.principleDescription {
+  color: var(--muted-foreground);
+  line-height: 1.75;
+}
+
+.separator {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+}
+
+.separatorLine {
+  width: 8rem;
+  height: 0.25rem;
+  background-color: #ffbd59;
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+@media (min-width: 640px) {
+  .principlesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .principlesGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

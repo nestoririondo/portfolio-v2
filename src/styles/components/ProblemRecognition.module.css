@@ -1,0 +1,120 @@
+.section {
+  height: 100vh;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 1.5rem;
+  background-color: var(--background);
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundDecoration {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 189, 89, 0.05);
+}
+
+.container {
+  max-width: 64rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.titleUnderline {
+  width: 5rem;
+  height: 0.25rem;
+  background-color: #ffbd59;
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+.problemsGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.problemCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--card);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.problemCard:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.problemIcon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgba(255, 189, 89, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.problemIcon svg {
+  width: 1rem;
+  height: 1rem;
+  color: #ffbd59;
+}
+
+.problemText {
+  color: var(--foreground);
+  line-height: 1.75;
+}
+
+.conclusion {
+  text-align: center;
+  margin-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.conclusionText {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  margin-bottom: 2rem;
+}
+
+.conclusionSeparator {
+  width: 8rem;
+  height: 0.25rem;
+  background-color: #ffbd59;
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+  
+  .problemsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

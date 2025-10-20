@@ -1,0 +1,156 @@
+.section {
+  height: 100vh;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 1.5rem;
+  background-color: var(--background);
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundDecoration {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 189, 89, 0.05);
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #ffbd59;
+  margin-bottom: 1rem;
+}
+
+.titleUnderline {
+  width: 5rem;
+  height: 0.25rem;
+  background-color: #ffbd59;
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+.content {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  background-color: var(--card);
+  border-radius: 0.75rem;
+  border-left: 4px solid #ffbd59;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffbd59;
+}
+
+.cardDescription {
+  color: var(--foreground);
+  line-height: 1.75;
+}
+
+.resultsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.resultItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.resultIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #ffbd59;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.resultText {
+  color: var(--foreground);
+}
+
+.imagesContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.imageContainer:hover .imageOverlay {
+  opacity: 0;
+}
+
+.imageContainer:hover .image {
+  transform: scale(1.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 189, 89, 0.2);
+  z-index: 10;
+  transition: opacity 0.5s ease;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.largeImage {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.smallImage {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+  
+  .content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
