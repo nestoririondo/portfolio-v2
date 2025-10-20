@@ -34,15 +34,20 @@ export function ProblemRecognition() {
 
           <div className={styles.problemsGrid}>
             {problemKeys.map((problemKey, index) => (
-              <div
+              
+              <motion.div
                 key={index}
                 className={styles.problemCard}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className={styles.problemIcon}>
                   <AlertTriangle />
                 </div>
                 <p className={styles.problemText}>{t(problemKey)}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
 

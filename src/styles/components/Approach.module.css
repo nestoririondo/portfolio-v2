@@ -1,3 +1,4 @@
+/* BRUTALIST APPROACH SECTION */
 .section {
   height: 100vh;
   min-height: 100vh;
@@ -5,123 +6,246 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 8rem 1.5rem;
-  background-color: var(--background);
+  align-items: center;
+  background-color: var(--brand-white);
+  padding: 2rem;
   position: relative;
-  overflow: hidden;
-}
-
-.backgroundDecoration {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(255, 189, 89, 0.05);
 }
 
 .container {
-  max-width: 72rem;
-  margin: 0 auto;
-  position: relative;
-  z-index: 10;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .titleSection {
-  text-align: center;
+  text-align: left;
   margin-bottom: 4rem;
 }
 
 .title {
-  font-size: 1.875rem;
-  font-weight: bold;
-  color: #ffbd59;
-  margin-bottom: 1rem;
-}
-
-.titleUnderline {
-  width: 5rem;
-  height: 0.25rem;
-  background-color: #ffbd59;
-  margin: 0 auto;
-  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 0.9;
+  color: var(--brand-primary);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
 .principlesGrid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border: 4px solid var(--brand-primary);
 }
 
 .principleCard {
-  text-align: center;
+  background-color: var(--brand-white);
+  border-right: 4px solid var(--brand-primary);
+  border-bottom: 4px solid var(--brand-primary);
+  padding: 3rem;
+  position: relative;
+  transition: all 0.2s ease;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
-.principleIcon {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 1rem;
-  background-color: #ffbd59;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem auto;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+.principleCard:nth-child(2n) {
+  border-right: none;
+}
+
+.principleCard:nth-child(3),
+.principleCard:nth-child(4) {
+  border-bottom: none;
+}
+
+.principleCard:hover {
+  background-color: var(--brand-primary);
+  color: var(--brand-white);
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0 var(--brand-accent);
 }
 
 .principleCard:hover .principleIcon {
-  transform: scale(1.1);
+  background-color: var(--brand-white);
+  color: var(--brand-primary);
+}
+
+.principleIcon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--brand-accent);
+  color: var(--brand-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: all 0.2s ease;
 }
 
 .principleIcon svg {
-  width: 2.5rem;
-  height: 2.5rem;
-  color: white;
+  width: 2rem;
+  height: 2rem;
 }
 
 .principleTitle {
-  margin-bottom: 1rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--foreground);
-  transition: color 0.3s ease;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
 }
 
 .principleCard:hover .principleTitle {
-  color: #ffbd59;
+  color: var(--brand-white);
 }
 
 .principleDescription {
-  color: var(--muted-foreground);
-  line-height: 1.75;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--brand-gray-medium);
+  margin: 0;
+  flex-grow: 1;
+  transition: color 0.2s ease;
 }
 
-.separator {
-  text-align: center;
+.principleCard:hover .principleDescription {
+  color: var(--brand-white);
+}
+
+.principleNumber {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-family: var(--font-mono);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--brand-gray-light);
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.principleCard:hover .principleNumber {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Statement strip */
+.statement {
   margin-top: 4rem;
-  padding-top: 2rem;
+  padding: 3rem 0;
+  background-color: var(--brand-primary);
+  border: 4px solid var(--brand-primary);
+  text-align: center;
 }
 
-.separatorLine {
-  width: 8rem;
-  height: 0.25rem;
-  background-color: #ffbd59;
+.statementText {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--brand-white);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  max-width: 800px;
   margin: 0 auto;
-  border-radius: 9999px;
 }
 
-@media (min-width: 640px) {
-  .principlesGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem;
+    height: auto;
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: 6rem;
   }
-}
 
-@media (min-width: 768px) {
+  .titleSection {
+    margin-bottom: 3rem;
+  }
+
   .title {
-    font-size: 2.25rem;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .principlesGrid {
+    grid-template-columns: 1fr;
+    border: 2px solid var(--brand-primary);
+  }
+
+  .principleCard {
+    border-right: none;
+    border-bottom: 2px solid var(--brand-primary);
+    padding: 2rem;
+    min-height: 240px;
+  }
+
+  .principleCard:last-child {
+    border-bottom: none;
+  }
+
+  .principleCard:nth-child(2n) {
+    border-right: none;
+  }
+
+  .principleCard:nth-child(3),
+  .principleCard:nth-child(4) {
+    border-bottom: 2px solid var(--brand-primary);
+  }
+
+  .principleCard:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .principleIcon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1.5rem;
+  }
+
+  .principleIcon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .principleTitle {
+    font-size: 1.125rem;
+  }
+
+  .principleDescription {
+    font-size: 0.875rem;
+  }
+
+  .principleNumber {
+    font-size: 2rem;
+  }
+
+  .statement {
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+  }
+
+  .statementText {
+    font-size: clamp(1.25rem, 6vw, 1.75rem);
   }
 }
 
-@media (min-width: 1024px) {
-  .principlesGrid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+/* Dark mode */
+.dark .section {
+  background-color: var(--brand-white);
+}
+
+.dark .principleCard {
+  background-color: var(--brand-white);
+}
+
+.dark .statement {
+  background-color: var(--brand-primary);
 }

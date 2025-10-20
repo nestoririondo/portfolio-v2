@@ -20,28 +20,21 @@ export function Contact() {
     if (heroElement) {
       heroElement.scrollIntoView({ behavior: "smooth" });
     }
-    // Update URL to remove hash
     window.history.pushState(null, "", window.location.pathname);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, this would send the form data to a backend
     toast.success(t("contact.form.success"));
     setFormData({ name: "", email: "", company: "", message: "" });
   };
 
   const autoResizeTextarea = () => {
     if (textareaRef.current) {
-      // Reset height to get accurate scrollHeight
-      textareaRef.current.style.height = "80px";
-
-      // Calculate new height based on content
+      textareaRef.current.style.height = "120px";
       const scrollHeight = textareaRef.current.scrollHeight;
-      const minHeight = 80;
+      const minHeight = 120;
       const newHeight = Math.max(scrollHeight, minHeight);
-
-      // Apply the new height
       textareaRef.current.style.height = `${newHeight}px`;
     }
   };
@@ -54,13 +47,11 @@ export function Contact() {
       [e.target.name]: e.target.value,
     }));
 
-    // Auto-resize textarea when message changes
     if (e.target.name === "message") {
       setTimeout(autoResizeTextarea, 0);
     }
   };
 
-  // Only auto-resize when component mounts (if there's initial content)
   useEffect(() => {
     if (formData.message) {
       autoResizeTextarea();
@@ -70,9 +61,6 @@ export function Contact() {
   return (
     <MotionSection>
       <section id="contact" className={styles.section}>
-        {/* Background decoration */}
-        <div className={styles.backgroundDecoration}></div>
-
         <div className={styles.container}>
           <motion.div
             className={styles.titleSection}
@@ -81,9 +69,8 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className={styles.title}>{t("contact.title")}</h2>
-            <div className={styles.titleUnderline}></div>
-            <p className={styles.subtitle}>{t("contact.subtitle")}</p>
+            <h2 className={styles.title}>Let's Talk</h2>
+            <p className={styles.subtitle}>Response within 24 hours</p>
           </motion.div>
 
           <motion.form
@@ -96,7 +83,7 @@ export function Contact() {
           >
             <div className={styles.formGroup}>
               <label htmlFor="name" className={styles.label}>
-                {t("contact.form.name")}
+                Name
               </label>
               <input
                 id="name"
@@ -105,12 +92,13 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 className={styles.input}
+                placeholder="Your full name"
               />
             </div>
 
             <div className={styles.formGroup}>
               <label htmlFor="email" className={styles.label}>
-                {t("contact.form.email")}
+                Email
               </label>
               <input
                 id="email"
@@ -120,12 +108,13 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 className={styles.input}
+                placeholder="your.email@company.com"
               />
             </div>
 
             <div className={styles.formGroup}>
               <label htmlFor="company" className={styles.label}>
-                {t("contact.form.company")}
+                Company
               </label>
               <input
                 id="company"
@@ -133,12 +122,13 @@ export function Contact() {
                 value={formData.company}
                 onChange={handleChange}
                 className={styles.input}
+                placeholder="Your company (optional)"
               />
             </div>
 
             <div className={styles.formGroup}>
               <label htmlFor="message" className={styles.label}>
-                {t("contact.form.message")}
+                Project
               </label>
               <textarea
                 ref={textareaRef}
@@ -147,13 +137,13 @@ export function Contact() {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                rows={3}
                 className={styles.textarea}
+                placeholder="Tell me about your project requirements, timeline, budget, or specific features you need..."
               />
             </div>
 
             <button type="submit" className={styles.submitButton}>
-              {t("contact.form.submit")}
+              Send Message
             </button>
           </motion.form>
         </div>
@@ -164,36 +154,30 @@ export function Contact() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className={styles.footerContainer}>
             <div className={styles.footerContent}>
               <div className={styles.footerText}>
-                <p className={styles.footerCopyright}>
-                  © {new Date().getFullYear()} Professional Web Development
-                  Services
-                </p>
+                © {new Date().getFullYear()} Professional Web Development
               </div>
 
               <div className={styles.footerLinks}>
                 <button
                   onClick={scrollToHome}
                   className={styles.footerLink}
-                  style={{ background: "none", border: "none" }}
+                  style={{ background: "none", border: "2px solid white" }}
                 >
-                  {t("nav.home")}
+                  Home
                 </button>
-                <a href="#problems" className={styles.footerLink}>
+                <a href="#services" className={styles.footerLink}>
                   Services
                 </a>
-                <a href="#case-study" className={styles.footerLink}>
-                  Portfolio
+                <a href="#approach" className={styles.footerLink}>
+                  Approach
                 </a>
                 <a href="#about" className={styles.footerLink}>
                   About
-                </a>
-                <a href="#contact" className={styles.footerLink}>
-                  Contact
                 </a>
               </div>
             </div>

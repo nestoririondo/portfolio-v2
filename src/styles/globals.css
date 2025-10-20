@@ -40,23 +40,20 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   
-  /* Enhanced brand colors - clean palette with #ffbd59 as main accent */
-  --brand-primary: #ffbd59;
-  --brand-secondary: #e76f51;
-  --brand-terracotta: #e76f51;
-  --brand-terracotta-dark: #c8644f;
-  --brand-sand: #fafafa;
-  --brand-stone: #4a4a4a;
-  --brand-forest: #2d5a3d;
-  --brand-amber: #ffbd59;
-  --brand-navy: #264653;
-  --brand-coral: #ffbd59;
-  --brand-sage: #86a397;
-  --brand-yellow: #ffbd59;
+  /* Brutalist color palette - bold and functional */
+  --brand-primary: #000000;
+  --brand-accent: #0066cc;
+  --brand-white: #ffffff;
+  --brand-gray-light: #f5f5f5;
+  --brand-gray-medium: #666666;
+  --brand-gray-dark: #1a1a1a;
+  --brand-blue: #0066cc;
+  --brand-blue-dark: #004499;
   
-  /* Typography */
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
+  /* Typography - brutalist fonts */
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 .dark {
@@ -96,19 +93,15 @@
   --sidebar-border: #262626;
   --sidebar-ring: #a0a0a0;
   
-  /* Dark mode brand colors */
-  --brand-primary: #ffcd73;
-  --brand-secondary: #ff8566;
-  --brand-terracotta: #ff8566;
-  --brand-terracotta-dark: #e76f51;
-  --brand-sand: #1a1a1a;
-  --brand-stone: #e0e0e0;
-  --brand-forest: #4a8a5a;
-  --brand-amber: #ffcd73;
-  --brand-navy: #4a7c89;
-  --brand-coral: #ffcd73;
-  --brand-sage: #a6c3b7;
-  --brand-yellow: #ffcd73;
+  /* Dark mode brutalist colors */
+  --brand-primary: #ffffff;
+  --brand-accent: #3388ff;
+  --brand-white: #000000;
+  --brand-gray-light: #1a1a1a;
+  --brand-gray-medium: #999999;
+  --brand-gray-dark: #f5f5f5;
+  --brand-blue: #3388ff;
+  --brand-blue-dark: #66aaff;
 }
 
 @theme inline {
@@ -243,8 +236,8 @@ body {
 section, footer {
   scroll-snap-align: start !important;
   scroll-snap-stop: always !important;
-  height: 100vh !important;
-  min-height: 100vh !important;
+  height: calc(100vh - 5rem) !important;
+  min-height: calc(100dvh - 5rem) !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
@@ -258,7 +251,7 @@ section, footer {
     min-height: 100svh !important;
     height: auto !important;
     padding: 2rem 1rem !important;
-    justify-content: flex-start !important;
+    justify-content: flex-start !important;;
   }
   
   body {
