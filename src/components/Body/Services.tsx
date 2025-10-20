@@ -1,25 +1,25 @@
 import { Code, Plug, Wrench } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext";
-import { MotionSection } from "./MotionSection";
+import { useLanguage } from "../../contexts/LanguageContext";
+import { MotionSection } from "../MotionSection";
 import { motion } from "framer-motion";
-import styles from "../styles/components/Services.module.css";
+import styles from "../../styles/components/Services.module.css";
 
 const services = [
   {
     icon: Code,
     titleKey: "services.custom.title",
-    descriptionKey: "services.custom.description"
+    descriptionKey: "services.custom.description",
   },
   {
     icon: Plug,
     titleKey: "services.api.title",
-    descriptionKey: "services.api.description"
+    descriptionKey: "services.api.description",
   },
   {
     icon: Wrench,
     titleKey: "services.consulting.title",
-    descriptionKey: "services.consulting.description"
-  }
+    descriptionKey: "services.consulting.description",
+  },
 ];
 
 export function Services() {
@@ -31,21 +31,19 @@ export function Services() {
         {/* Background with subtle pattern */}
         <div className={styles.backgroundDecoration}></div>
         <div className={styles.backgroundPattern}></div>
-        
+
         <div className={styles.container}>
-          <motion.div 
+          <motion.div
             className={styles.titleSection}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-150px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className={styles.title}>
-              {t('services.title')}
-            </h2>
+            <h2 className={styles.title}>{t("services.title")}</h2>
             <div className={styles.titleUnderline}></div>
           </motion.div>
-          
+
           <div className={styles.servicesGrid}>
             {services.map((service, index) => {
               const Icon = service.icon;
@@ -61,9 +59,7 @@ export function Services() {
                   <div className={styles.serviceIcon}>
                     <Icon />
                   </div>
-                  <h3 className={styles.serviceTitle}>
-                    {t(service.titleKey)}
-                  </h3>
+                  <h3 className={styles.serviceTitle}>{t(service.titleKey)}</h3>
                   <p className={styles.serviceDescription}>
                     {t(service.descriptionKey)}
                   </p>
@@ -71,9 +67,9 @@ export function Services() {
               );
             })}
           </div>
-          
+
           {/* Visual separator */}
-          <motion.div 
+          <motion.div
             className={styles.separator}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

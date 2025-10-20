@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { toast } from "sonner";
-import { useLanguage } from "../contexts/LanguageContext";
-import { MotionSection } from "./MotionSection";
+import { useLanguage } from "../../contexts/LanguageContext";
+import { MotionSection } from "../MotionSection";
 import { motion } from "framer-motion";
-import styles from "../styles/components/Contact.module.css";
+import styles from "../../styles/components/Contact.module.css";
 
 export function Contact() {
   const { t } = useLanguage();

@@ -1,9 +1,9 @@
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ImageWithFallback } from "../figma/ImageWithFallback";
 import { CheckCircle } from "lucide-react";
-import { MotionSection } from "./MotionSection";
+import { MotionSection } from "../MotionSection";
 import { motion } from "framer-motion";
-import { useLanguage } from "../contexts/LanguageContext";
-import styles from "../styles/components/CaseStudy.module.css";
+import { useLanguage } from "../../contexts/LanguageContext";
+import styles from "../../styles/components/CaseStudy.module.css";
 
 export function CaseStudy() {
   const { t } = useLanguage();

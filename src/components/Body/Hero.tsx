@@ -1,8 +1,8 @@
 import { ArrowRight, Code, Palette, Zap } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { useLanguage } from "../contexts/LanguageContext";
+import { ImageWithFallback } from "../figma/ImageWithFallback";
+import { useLanguage } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
-import styles from "../styles/components/Hero.module.css";
+import styles from "../../styles/components/Hero.module.css";
 
 export function Hero() {
   const { t } = useLanguage();

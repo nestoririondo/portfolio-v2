@@ -1,61 +1,59 @@
 import { Target, MessageSquare, Award, ShieldCheck } from "lucide-react";
-import { MotionSection } from "./MotionSection";
+import { MotionSection } from "../MotionSection";
 import { motion } from "framer-motion";
-import { useLanguage } from "../contexts/LanguageContext";
-import styles from "../styles/components/Approach.module.css";
+import { useLanguage } from "../../contexts/LanguageContext";
+import styles from "../../styles/components/Approach.module.css";
 
 const principles = [
   {
     icon: Target,
     titleKey: "approach.business.title",
-    descriptionKey: "approach.business.description"
+    descriptionKey: "approach.business.description",
   },
   {
     icon: MessageSquare,
     titleKey: "approach.communication.title",
-    descriptionKey: "approach.communication.description"
+    descriptionKey: "approach.communication.description",
   },
   {
     icon: Award,
     titleKey: "approach.professional.title",
-    descriptionKey: "approach.professional.description"
+    descriptionKey: "approach.professional.description",
   },
   {
     icon: ShieldCheck,
     titleKey: "approach.lasting.title",
-    descriptionKey: "approach.lasting.description"
-  }
+    descriptionKey: "approach.lasting.description",
+  },
 ];
 
 export function Approach() {
   const { t } = useLanguage();
-  
+
   return (
     <MotionSection>
       <section id="approach" className={styles.section}>
         {/* Background decoration */}
         {/* <div className={styles.backgroundDecoration}></div> */}
-        
+
         <div className={styles.container}>
-          <motion.div 
+          <motion.div
             className={styles.titleSection}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className={styles.title}>
-              {t('approach.title')}
-            </h2>
+            <h2 className={styles.title}>{t("approach.title")}</h2>
             <div className={styles.titleUnderline}></div>
           </motion.div>
-          
+
           <div className={styles.principlesGrid}>
             {principles.map((principle, index) => {
               const Icon = principle.icon;
               return (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={index}
                   className={styles.principleCard}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -75,9 +73,9 @@ export function Approach() {
               );
             })}
           </div>
-          
+
           {/* Visual separator */}
-          <motion.div 
+          <motion.div
             className={styles.separator}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

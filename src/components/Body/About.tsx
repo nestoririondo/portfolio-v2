@@ -1,8 +1,8 @@
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { useLanguage } from "../contexts/LanguageContext";
-import { MotionSection } from "./MotionSection";
+import { ImageWithFallback } from "../figma/ImageWithFallback";
+import { useLanguage } from "../../contexts/LanguageContext";
+import { MotionSection } from "../MotionSection";
 import { motion } from "framer-motion";
-import styles from "../styles/components/About.module.css";
+import styles from "../../styles/components/About.module.css";
 
 export function About() {
   const { t } = useLanguage();

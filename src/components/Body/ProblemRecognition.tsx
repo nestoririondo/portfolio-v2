@@ -1,8 +1,8 @@
 import { AlertTriangle } from "lucide-react";
-import { MotionSection } from "./MotionSection";
+import { MotionSection } from "../MotionSection";
 import { motion } from "framer-motion";
-import { useLanguage } from "../contexts/LanguageContext";
-import styles from "../styles/components/ProblemRecognition.module.css";
+import { useLanguage } from "../../contexts/LanguageContext";
+import styles from "../../styles/components/ProblemRecognition.module.css";
 
 const problemKeys = [
   "problems.template",
