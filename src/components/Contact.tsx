@@ -12,16 +12,16 @@ export function Contact() {
     name: "",
     email: "",
     company: "",
-    message: ""
+    message: "",
   });
 
   const scrollToHome = () => {
-    const heroElement = document.getElementById('hero');
+    const heroElement = document.getElementById("hero");
     if (heroElement) {
-      heroElement.scrollIntoView({ behavior: 'smooth' });
+      heroElement.scrollIntoView({ behavior: "smooth" });
     }
     // Update URL to remove hash
-    window.history.pushState(null, '', window.location.pathname);
+    window.history.pushState(null, "", window.location.pathname);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -176,12 +176,12 @@ export function Contact() {
               </div>
 
               <div className={styles.footerLinks}>
-                <button 
-                  onClick={scrollToHome} 
+                <button
+                  onClick={scrollToHome}
                   className={styles.footerLink}
-                  style={{ background: 'none', border: 'none' }}
+                  style={{ background: "none", border: "none" }}
                 >
-                  {t('nav.home')}
+                  {t("nav.home")}
                 </button>
                 <a href="#problems" className={styles.footerLink}>
                   Services
