@@ -65,8 +65,12 @@ export const de = {
   "casestudy.image2.alt": "Immobilie",
 
   // About
+  "about.title": "Über mich",
   "about.description1":
     "Ich bin Softwareentwickler in der Automatisierungsbranche, wo ich technische Teams bei der Entwicklung komplexer Systeme leite. Ich übernehme ausgewählte Webentwicklungsprojekte, weil ich praktisches Programmieren und kreative Problemlösungen genieße.",
+  "about.profile.role": "Softwareentwickler",
+  "about.profile.location": "Berlin, Deutschland",
+  "about.status": "Derzeit nehme ich ausgewählte Projekte an",
 
   // Contact
   "contact.title": "Lass uns über dein Projekt sprechen",

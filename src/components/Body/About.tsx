@@ -17,7 +17,7 @@ export function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className={styles.title}>About</h2>
+          <h2 className={styles.title}>{t("about.title")}</h2>
         </motion.div>
 
         <motion.div
@@ -32,8 +32,8 @@ export function About() {
               NI
             </div>
             <div className={styles.profileLabel}>
-              Software Developer<br/>
-              Berlin, Germany
+              {t("about.profile.role")}<br/>
+              {t("about.profile.location")}
             </div>
           </div>
 
@@ -53,7 +53,7 @@ export function About() {
             <div className={styles.statusRow}>
               <StatusIndicator />
               <span className={styles.statusText}>
-                Currently accepting select projects
+                {t("about.status")}
               </span>
             </div>
           </div>

@@ -52,7 +52,11 @@ export const en = {
   'casestudy.image2.alt': 'Real estate property',
   
   // About
+  'about.title': 'About',
   'about.description1': 'I\'m a software developer working in the automation industry, where I lead technical teams building complex systems. I take on select web development projects because I enjoy hands-on coding and creative problem-solving.',
+  'about.profile.role': 'Software Developer',
+  'about.profile.location': 'Berlin, Germany',
+  'about.status': 'Currently accepting select projects',
   
   // Contact
   'contact.title': 'Let\'s Talk About Your Project',

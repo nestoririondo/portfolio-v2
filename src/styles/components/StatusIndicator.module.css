@@ -15,8 +15,8 @@
 
 .statusDot {
   position: relative;
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: rgba(16, 185, 129, 0.9);
   z-index: 1;
@@ -37,7 +37,7 @@
 
 @keyframes ping {
   75%, 100% {
-    transform: translate(-50%, -50%) scale(2);
+    transform: translate(-50%, -50%) scale(4);
     opacity: 0;
   }
 }

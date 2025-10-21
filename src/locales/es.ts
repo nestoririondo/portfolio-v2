@@ -64,8 +64,12 @@ export const es = {
   "casestudy.image2.alt": "Propiedad inmobiliaria",
 
   // About
+  "about.title": "Sobre mí",
   "about.description1":
     "Soy un desarrollador de software que trabaja en la industria de automatización, donde lidero equipos técnicos construyendo sistemas complejos. Tomo proyectos selectos de desarrollo web porque disfruto la programación práctica y la resolución creativa de problemas.",
+  "about.profile.role": "Desarrollador de Software",
+  "about.profile.location": "Berlín, Alemania",
+  "about.status": "Actualmente acepto proyectos selectos",
 
   // Contact
   "contact.title": "Hablemos sobre tu proyecto",
