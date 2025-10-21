@@ -99,6 +99,8 @@
   border-color: rgba(0, 0, 0, 0.2);
 }
 
+.input:e
+
 .textarea {
   resize: none;
   min-height: 60px;
@@ -151,6 +153,23 @@
 .ctaButton:active {
   transform: translate(6px, 6px) !important;
   box-shadow: 0 0 0 #0066cc !important;
+}
+
+.ctaButton:disabled {
+  background-color: var(--brand-gray-medium) !important;
+  border-color: var(--brand-gray-medium) !important;
+  color: var(--brand-gray-light) !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: 6px 6px 0 var(--brand-gray-light) !important;
+}
+
+.ctaButton:disabled:hover {
+  transform: none !important;
+  box-shadow: 6px 6px 0 var(--brand-gray-light) !important;
+  background-color: var(--brand-gray-medium) !important;
+  border-color: var(--brand-gray-medium) !important;
+  color: var(--brand-gray-light) !important;
 }
 
 /* Footer integrated into contact section */

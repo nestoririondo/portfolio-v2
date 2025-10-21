@@ -15,6 +15,7 @@ export function Contact() {
     company: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const scrollToHome = () => {
     const heroElement = document.getElementById("hero");
@@ -24,24 +25,52 @@ export function Contact() {
     window.history.pushState(null, "", window.location.pathname);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.custom(() => (
-      <div style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        gap: '12px', 
-        padding: '16px', 
-        background: 'white', 
-        border: '1px solid #e5e7eb', 
-        borderRadius: '8px',
-        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-      }}>
-        <Checkmark size="medium" color="#10b981" />
-        <span>{t("contact.form.success")}</span>
-      </div>
-    ));
-    setFormData({ name: "", email: "", company: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      // Replace with your actual Formspree form ID
+      const response = await fetch('https://formspree.io/f/xbjnrlbq', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+          _subject: `New contact form submission from ${formData.name}`,
+        }),
+      });
+
+      if (response.ok) {
+        toast.custom(() => (
+          <div style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: '12px', 
+            padding: '16px', 
+            background: 'white', 
+            border: '1px solid #e5e7eb', 
+            borderRadius: '8px',
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+          }}>
+            <Checkmark size="medium" color="#10b981" />
+            <span>Message sent successfully! We'll get back to you within 24 hours.</span>
+          </div>
+        ));
+        setFormData({ name: "", email: "", company: "", message: "" });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast.error('Failed to send message. Please try again or contact us directly.');
+      console.error('Form submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const autoResizeTextarea = () => {
@@ -73,6 +102,8 @@ export function Contact() {
       autoResizeTextarea();
     }
   }, []);
+
+  const isFormComplete = formData.name.trim() !== "" && formData.email.trim() !== "" && formData.message.trim() !== "";
 
   return (
     <MotionSection>
@@ -154,8 +185,12 @@ export function Contact() {
               />
             </div>
 
-            <button type="submit" className={styles.ctaButton}>
-              Send Message
+            <button 
+              type="submit" 
+              className={styles.ctaButton} 
+              disabled={!isFormComplete || isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </motion.form>
         </div>
