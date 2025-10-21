@@ -79,7 +79,9 @@ export const en = {
   'contact.form.message': 'Tell me about your project',
   'contact.form.placeholder': 'Tell me about your project requirements, timeline, budget, or any specific features you need...',
   'contact.form.submit': 'Send Message',
+  'contact.form.sending': 'Sending...',
   'contact.form.success': 'Message sent! I\'ll respond within 24 hours.',
+  'contact.form.error': 'Failed to send message. Please try again or contact us directly.',
   
   // Footer
   'footer.copyright': 'Professional Web Development Services',

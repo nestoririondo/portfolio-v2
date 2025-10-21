@@ -94,7 +94,9 @@ export const es = {
   "contact.form.placeholder":
     "Cuéntame sobre los requisitos de tu proyecto, cronograma, presupuesto, o cualquier característica específica que necesites...",
   "contact.form.submit": "Enviar Mensaje",
+  "contact.form.sending": "Enviando...",
   "contact.form.success": "¡Mensaje enviado! Responderé dentro de 24 horas.",
+  "contact.form.error": "Error al enviar el mensaje. Por favor intenta de nuevo o contáctanos directamente.",
 
   // Footer
   "footer.copyright": "Servicios Profesionales de Desarrollo Web",

@@ -58,7 +58,7 @@ export function Contact() {
             boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
           }}>
             <Checkmark size="medium" color="#10b981" />
-            <span>Message sent successfully! We'll get back to you within 24 hours.</span>
+            <span>{t("contact.form.success")}</span>
           </div>
         ));
         setFormData({ name: "", email: "", company: "", message: "" });
@@ -66,7 +66,7 @@ export function Contact() {
         throw new Error('Failed to send message');
       }
     } catch (error) {
-      toast.error('Failed to send message. Please try again or contact us directly.');
+      toast.error(t("contact.form.error"));
       console.error('Form submission error:', error);
     } finally {
       setIsSubmitting(false);
@@ -116,8 +116,8 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className={styles.title}>Let's Talk</h2>
-            <p className={styles.subtitle}>Response within 24 hours</p>
+            <h2 className={styles.title}>{t("contact.title")}</h2>
+            <p className={styles.subtitle}>{t("contact.subtitle")}</p>
           </motion.div>
 
           <motion.form
@@ -130,7 +130,7 @@ export function Contact() {
           >
             <div className={styles.formGroup}>
               <label htmlFor="name" className={styles.label}>
-                Name
+                {t("contact.form.name")}
               </label>
               <input
                 id="name"
@@ -144,7 +144,7 @@ export function Contact() {
 
             <div className={styles.formGroup}>
               <label htmlFor="email" className={styles.label}>
-                Email
+                {t("contact.form.email")}
               </label>
               <input
                 id="email"
@@ -159,7 +159,7 @@ export function Contact() {
 
             <div className={styles.formGroup}>
               <label htmlFor="company" className={styles.label}>
-                Company
+                {t("contact.form.company")}
               </label>
               <input
                 id="company"
@@ -172,7 +172,7 @@ export function Contact() {
 
             <div className={styles.formGroup}>
               <label htmlFor="message" className={styles.label}>
-                What do you want to build?
+                {t("contact.form.message")}
               </label>
               <textarea
                 ref={textareaRef}
@@ -182,6 +182,7 @@ export function Contact() {
                 onChange={handleChange}
                 required
                 className={styles.textarea}
+                placeholder={t("contact.form.placeholder")}
               />
             </div>
 
@@ -190,7 +191,7 @@ export function Contact() {
               className={styles.ctaButton} 
               disabled={!isFormComplete || isSubmitting}
             >
-              {isSubmitting ? "Sending..." : "Send Message"}
+              {isSubmitting ? t("contact.form.sending") : t("contact.form.submit")}
             </button>
           </motion.form>
         </div>
@@ -206,7 +207,7 @@ export function Contact() {
           <div className={styles.footerContainer}>
             <div className={styles.footerContent}>
               <div className={styles.footerText}>
-                © {new Date().getFullYear()} Professional Web Development
+                © {new Date().getFullYear()} {t("footer.copyright")}
               </div>
 
               <div className={styles.footerLinks}>
@@ -215,16 +216,16 @@ export function Contact() {
                   className={styles.footerLink}
                   style={{ background: "none", border: "2px solid white" }}
                 >
-                  Home
+                  {t("nav.home")}
                 </button>
                 <a href="#services" className={styles.footerLink}>
-                  Services
+                  {t("footer.nav.services")}
                 </a>
                 <a href="#approach" className={styles.footerLink}>
-                  Approach
+                  {t("nav.approach")}
                 </a>
                 <a href="#about" className={styles.footerLink}>
-                  About
+                  {t("footer.nav.about")}
                 </a>
               </div>
             </div>
