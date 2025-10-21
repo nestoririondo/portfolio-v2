@@ -1,5 +1,4 @@
-import { AlertTriangle } from "lucide-react";
-import { motion } from "framer-motion";
+import { AlertTriangle, X } from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import styles from "../../styles/components/ProblemRecognition.module.css";
 
@@ -17,43 +16,42 @@ export function ProblemRecognition() {
 
   return (
       <section id="problems" className={styles.section}>
-        {/* Background decoration */}
-        {/* <div className={styles.backgroundDecoration}></div> */}
-
         <div className={styles.container}>
-          <motion.div
-            className={styles.titleSection}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className={styles.title}>{t("problems.title")}</h2>
-            <div className={styles.titleUnderline}></div>
-          </motion.div>
+          <div className={styles.titleSection}>
+            <div className={styles.titleWrapper}>
+              <h2 className={styles.title}>{t("problems.title")}</h2>
+              <div className={styles.titleBorder}></div>
+            </div>
+            <div className={styles.titleAccent}>PROBLEMS</div>
+          </div>
 
           <div className={styles.problemsGrid}>
             {problemKeys.map((problemKey, index) => (
-              
-              <motion.div
-                key={index}
-                className={styles.problemCard}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className={styles.problemIcon}>
-                  <AlertTriangle />
+              <div key={index} className={styles.problemCard}>
+                <div className={styles.problemHeader}>
+                  <div className={styles.problemIcon}>
+                    <X />
+                  </div>
+                  <div className={styles.problemNumber}>
+                    {String(index + 1).padStart(2, '0')}
+                  </div>
                 </div>
-                <p className={styles.problemText}>{t(problemKey)}</p>
-              </motion.div>
+                <div className={styles.problemContent}>
+                  <p className={styles.problemText}>{t(problemKey)}</p>
+                </div>
+                <div className={styles.problemBorder}></div>
+              </div>
             ))}
           </div>
 
           <div className={styles.conclusion}>
-            <p className={styles.conclusionText}>{t("problems.conclusion")}</p>
-            <div className={styles.conclusionSeparator}></div>
+            <div className={styles.conclusionBox}>
+              <div className={styles.conclusionHeader}>
+                <div className={styles.conclusionIcon}>!</div>
+                <div className={styles.conclusionLabel}>SOLUTION NEEDED</div>
+              </div>
+              <p className={styles.conclusionText}>{t("problems.conclusion")}</p>
+            </div>
           </div>
         </div>
       </section>

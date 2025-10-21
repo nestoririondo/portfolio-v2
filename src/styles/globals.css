@@ -65,7 +65,7 @@
 }
 
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
@@ -78,7 +78,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
   }
-}
+} */
 
 
 html {
@@ -92,11 +92,10 @@ body {
   padding: 0;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 100vh;
 }
 
 /* Ensure scroll snap works on all sections */
-section, footer {
+/* section, footer {
   scroll-snap-align: start !important;
   scroll-snap-stop: always !important;
   height: calc(100vh - 5rem) !important;
@@ -106,10 +105,10 @@ section, footer {
   justify-content: center !important;
   box-sizing: border-box;
   position: relative;
-}
+} */
 
 /* Mobile viewport adjustments */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   section, footer {
     min-height: 100svh !important;
     height: auto !important;
@@ -120,10 +119,10 @@ section, footer {
   body {
     height: 100svh;
   }
-}
+} */
 
 /* Chrome-specific fix for scroll snap overshooting */
-@supports (-webkit-appearance: none) and (not (-moz-appearance: none)) {
+/* @supports (-webkit-appearance: none) and (not (-moz-appearance: none)) {
   body, main {
     scroll-snap-type: y proximity !important;
   }
@@ -131,7 +130,7 @@ section, footer {
   section, footer {
     scroll-snap-stop: normal !important;
   }
-}
+} */
 
 
 
