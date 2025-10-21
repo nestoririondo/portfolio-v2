@@ -30,8 +30,12 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Replace with your actual Formspree form ID
-      const response = await fetch("https://formspree.io/f/xbjnrlbq", {
+      const formspreeId = import.meta.env.VITE_FORMSPREE_FORM_ID;
+      if (!formspreeId) {
+        throw new Error("Formspree form ID not configured");
+      }
+      
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
