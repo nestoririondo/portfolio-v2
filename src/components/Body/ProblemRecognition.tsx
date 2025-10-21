@@ -1,4 +1,4 @@
-import { AlertTriangle, X } from "lucide-react";
+import { X } from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import styles from "../../styles/components/ProblemRecognition.module.css";
 

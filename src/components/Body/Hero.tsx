@@ -2,14 +2,12 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { StatusIndicator } from "../StatusIndicator";
+import { scrollToContact } from "../../utils/scroll";
 import styles from "../../styles/components/Hero.module.css";
 
 export function Hero() {
   const { t } = useLanguage();
 
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div className={styles.heroWrapper}>
@@ -51,7 +49,7 @@ export function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 1, ease: "backIn" }}
             >
-              <StatusIndicator status="available" size="medium" />
+              <StatusIndicator />
               {t("hero.status")}
             </motion.div>
           </motion.div>

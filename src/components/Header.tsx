@@ -2,6 +2,7 @@ import { Globe, MessageCircle } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { CircleBlurThemeToggle } from "./CircleBlurThemeToggle";
+import { scrollToContact, scrollToTop } from "../utils/scroll";
 import styles from "../styles/components/Header.module.css";
 
 export function Header() {
@@ -14,19 +15,6 @@ export function Header() {
     setLanguage(languages[nextIndex] as any);
   };
 
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToTop = () => {
-    const heroElement = document.getElementById("hero");
-    if (heroElement) {
-      heroElement.scrollIntoView({ behavior: "smooth" });
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-    window.history.pushState(null, "", window.location.pathname);
-  };
 
   return (
     <motion.header

@@ -1,4 +1,4 @@
-/* STATUS INDICATOR COMPONENT - SHADCN STYLE WITHOUT TAILWIND */
+/* STATUS INDICATOR COMPONENT */
 .status {
   position: relative;
   display: inline-flex;
@@ -15,9 +15,10 @@
 
 .statusDot {
   position: relative;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  border: none;
-  outline: none;
+  background-color: rgba(16, 185, 129, 0.9);
   z-index: 1;
 }
 
@@ -28,73 +29,12 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  background-color: rgba(16, 185, 129, 0.75);
   transform: translate(-50%, -50%);
   animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   z-index: 0;
 }
 
-/* Size variants */
-.small .statusDot {
-  width: 8px;
-  height: 8px;
-}
-
-.medium .statusDot {
-  width: 12px;
-  height: 12px;
-}
-
-.large .statusDot {
-  width: 16px;
-  height: 16px;
-}
-
-/* Status color variants */
-.online .statusDot,
-.available .statusDot {
-  background-color: rgba(16, 185, 129, 0.9);
-}
-
-.online .pingEffect,
-.available .pingEffect {
-  background-color: rgba(16, 185, 129, 0.75);
-}
-
-.offline .statusDot {
-  background-color: rgba(107, 114, 128, 0.9);
-}
-
-.offline .pingEffect {
-  background-color: rgba(107, 114, 128, 0.75);
-}
-
-.maintenance .statusDot {
-  background-color: rgba(245, 158, 11, 0.9);
-}
-
-.maintenance .pingEffect {
-  background-color: rgba(245, 158, 11, 0.75);
-}
-
-.degraded .statusDot {
-  background-color: rgba(239, 68, 68, 0.9);
-}
-
-.degraded .pingEffect {
-  background-color: rgba(239, 68, 68, 0.75);
-}
-
-/* Status label */
-.statusLabel {
-  font-family: var(--font-mono, monospace);
-  font-size: 0.875rem;
-  color: var(--brand-gray-medium, #6b7280);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 500;
-}
-
-/* Ping animation - inspired by Tailwind's ping animation */
 @keyframes ping {
   75%, 100% {
     transform: translate(-50%, -50%) scale(2);
@@ -102,47 +42,9 @@
   }
 }
 
-/* Responsive sizing */
 @media (max-width: 768px) {
-  .large .statusDot {
-    width: 10px;
-    height: 10px;
-  }
-  
-  .medium .statusDot {
+  .statusDot {
     width: 8px;
     height: 8px;
   }
-  
-  .small .statusDot {
-    width: 6px;
-    height: 6px;
-  }
-
-  .statusLabel {
-    font-size: 0.75rem;
-  }
-}
-
-/* Dark mode adjustments */
-.dark .statusLabel {
-  color: var(--brand-gray-light, #9ca3af);
-}
-
-/* Enhanced variants for better visual hierarchy */
-.status.online .statusLabel,
-.status.available .statusLabel {
-  color: rgba(5, 150, 105, 0.8);
-}
-
-.status.offline .statusLabel {
-  color: rgba(107, 114, 128, 0.8);
-}
-
-.status.maintenance .statusLabel {
-  color: rgba(217, 119, 6, 0.8);
-}
-
-.status.degraded .statusLabel {
-  color: rgba(220, 38, 38, 0.8);
 }

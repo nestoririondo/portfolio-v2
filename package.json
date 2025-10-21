@@ -3,21 +3,17 @@
       "version": "0.1.0",
       "private": true,
       "dependencies": {
-            "@radix-ui/react-label": "^2.1.2",
-            "@radix-ui/react-slot": "^1.1.2",
-            "class-variance-authority": "^0.7.1",
-            "clsx": "*",
             "framer-motion": "^12.23.24",
             "lucide-react": "^0.487.0",
             "react": "^18.3.1",
             "react-checkmark": "^2.1.1",
             "react-dom": "^18.3.1",
-            "sonner": "^2.0.3",
-            "tailwind-merge": "*"
+            "sonner": "^2.0.3"
       },
       "devDependencies": {
             "@types/node": "^20.10.0",
             "@types/react": "^19.2.2",
+            "@types/react-dom": "^19.2.2",
             "@vitejs/plugin-react-swc": "^3.10.2",
             "vite": "6.3.5"
       },

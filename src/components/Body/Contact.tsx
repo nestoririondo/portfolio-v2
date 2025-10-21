@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import { toast } from "sonner";
 import { Checkmark } from "react-checkmark";
 import { useLanguage } from "../../contexts/LanguageContext";
-import { MotionSection } from "../MotionSection";
 import { motion } from "framer-motion";
 import styles from "../../styles/components/Contact.module.css";
 
@@ -110,7 +109,15 @@ export function Contact() {
   }, []);
 
   return (
-    <MotionSection>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-200px" }}
+      transition={{
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }}
+    >
       <section id="contact" className={styles.section}>
         <div className={styles.container}>
           <motion.div
@@ -238,6 +245,6 @@ export function Contact() {
           </div>
         </motion.footer>
       </section>
-    </MotionSection>
+    </motion.div>
   );
 }

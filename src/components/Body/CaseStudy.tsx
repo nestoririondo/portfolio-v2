@@ -1,4 +1,4 @@
-import { ImageWithFallback } from "../figma/ImageWithFallback";
+import { ImageWithFallback } from "../ImageWithFallback";
 import { CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../../contexts/LanguageContext";

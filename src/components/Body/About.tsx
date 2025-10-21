@@ -1,12 +1,8 @@
 import { useLanguage } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { StatusIndicator } from "../StatusIndicator";
+import { SKILLS } from "../../constants/skills";
 import styles from "../../styles/components/About.module.css";
-
-const skills = [
-  "React", "TypeScript", "Node.js", "API Design", 
-  "Database Architecture", "System Integration", "Performance Optimization"
-];
 
 export function About() {
   const { t } = useLanguage();
@@ -47,7 +43,7 @@ export function About() {
             </p>
             
             <div className={styles.skillsContainer}>
-              {skills.map((skill, index) => (
+              {SKILLS.map((skill, index) => (
                 <span key={index} className={styles.skillBadge}>
                   {skill}
                 </span>
@@ -55,10 +51,7 @@ export function About() {
             </div>
 
             <div className={styles.statusRow}>
-              <StatusIndicator 
-                status="available" 
-                size="medium" 
-              />
+              <StatusIndicator />
               <span className={styles.statusText}>
                 Currently accepting select projects
               </span>

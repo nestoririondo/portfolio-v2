@@ -1,6 +1,7 @@
 import { Code, Plug, Wrench } from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
+import { TECH_STACK } from "../../constants/skills";
 import styles from "../../styles/components/Services.module.css";
 
 const services = [
@@ -24,10 +25,6 @@ const services = [
   },
 ];
 
-const techStack = [
-  "React", "TypeScript", "Node.js", "Next.js", "API Integration", 
-  "Database Design", "Performance Optimization", "Testing"
-];
 
 export function Services() {
   const { t } = useLanguage();
@@ -77,7 +74,7 @@ export function Services() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className={styles.techList}>
-            {techStack.map((tech, index) => (
+            {TECH_STACK.map((tech, index) => (
               <span key={index} className={styles.techItem}>
                 {tech}
               </span>
