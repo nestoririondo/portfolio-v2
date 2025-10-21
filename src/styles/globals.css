@@ -76,6 +76,7 @@ body {
   padding: 0;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  background-color: var(--background);
 }
 
 footer {

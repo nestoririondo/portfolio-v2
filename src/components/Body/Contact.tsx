@@ -31,10 +31,10 @@ export function Contact() {
 
     try {
       // Replace with your actual Formspree form ID
-      const response = await fetch('https://formspree.io/f/xbjnrlbq', {
-        method: 'POST',
+      const response = await fetch("https://formspree.io/f/xbjnrlbq", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           name: formData.name,
@@ -47,27 +47,29 @@ export function Contact() {
 
       if (response.ok) {
         toast.custom(() => (
-          <div style={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            gap: '12px', 
-            padding: '16px', 
-            background: 'white', 
-            border: '1px solid #e5e7eb', 
-            borderRadius: '8px',
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-          }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              padding: "16px",
+              background: "white",
+              border: "1px solid #e5e7eb",
+              borderRadius: "8px",
+              boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+            }}
+          >
             <Checkmark size="medium" color="#10b981" />
             <span>{t("contact.form.success")}</span>
           </div>
         ));
         setFormData({ name: "", email: "", company: "", message: "" });
       } else {
-        throw new Error('Failed to send message');
+        throw new Error("Failed to send message");
       }
     } catch (error) {
       toast.error(t("contact.form.error"));
-      console.error('Form submission error:', error);
+      console.error("Form submission error:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -102,8 +104,6 @@ export function Contact() {
       autoResizeTextarea();
     }
   }, []);
-
-  const isFormComplete = formData.name.trim() !== "" && formData.email.trim() !== "" && formData.message.trim() !== "";
 
   return (
     <MotionSection>
@@ -186,12 +186,14 @@ export function Contact() {
               />
             </div>
 
-            <button 
-              type="submit" 
-              className={styles.ctaButton} 
-              disabled={!isFormComplete || isSubmitting}
+            <button
+              type="submit"
+              className={styles.ctaButton}
+              disabled={isSubmitting}
             >
-              {isSubmitting ? t("contact.form.sending") : t("contact.form.submit")}
+              {isSubmitting
+                ? t("contact.form.sending")
+                : t("contact.form.submit")}
             </button>
           </motion.form>
         </div>

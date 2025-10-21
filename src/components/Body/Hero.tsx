@@ -14,9 +14,6 @@ export function Hero() {
   return (
     <div className={styles.heroWrapper}>
       <section id="hero" className={styles.heroSection}>
-        {/* Subtle grid overlay */}
-        <div className={styles.gridOverlay}></div>
-
         <div className={styles.content}>
           <motion.h1
             className={styles.title}

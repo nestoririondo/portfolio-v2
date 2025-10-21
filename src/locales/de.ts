@@ -93,12 +93,12 @@ export const de = {
   "contact.form.company": "Unternehmen (Optional)",
   "contact.form.message": "Erzähl mir von deinem Projekt",
   "contact.form.placeholder":
-    "Erzähl mir von deinen Projektanforderungen, Zeitplan, Budget oder spezifischen Features, die du benötigst...",
+    "Was ist dein Ziel, Budget und Zeitplan?",
   "contact.form.submit": "Nachricht senden",
   "contact.form.sending": "Wird gesendet...",
   "contact.form.success":
     "Nachricht gesendet! Ich antworte innerhalb von 24 Stunden.",
-  "contact.form.error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
+  "contact.form.error": "Fehler beim Senden der Nachricht. Bitte versuche es erneut.",
 
   // Footer
   "footer.copyright": "Professionelle Webentwicklungs-Dienstleistungen",

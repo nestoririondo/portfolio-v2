@@ -91,12 +91,12 @@ export const es = {
   "contact.form.email": "Email",
   "contact.form.company": "Empresa (Opcional)",
   "contact.form.message": "Cuéntame sobre tu proyecto",
-  "contact.form.placeholder":
-    "Cuéntame sobre los requisitos de tu proyecto, cronograma, presupuesto, o cualquier característica específica que necesites...",
+  "contact.form.placeholder": "¿Cuáles son tus objetivos, presupuesto y plazos?",
   "contact.form.submit": "Enviar Mensaje",
   "contact.form.sending": "Enviando...",
   "contact.form.success": "¡Mensaje enviado! Responderé dentro de 24 horas.",
-  "contact.form.error": "Error al enviar el mensaje. Por favor intenta de nuevo o contáctanos directamente.",
+  "contact.form.error":
+    "Error al enviar el mensaje. Por favor inténtalo de nuevo.",
 
   // Footer
   "footer.copyright": "Servicios Profesionales de Desarrollo Web",

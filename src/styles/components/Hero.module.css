@@ -5,6 +5,14 @@
   background-size: 60px 60px;
 }
 
+:global(.dark) .heroWrapper {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
 .heroSection {
   height: 100vh;
   min-height: 100vh;
@@ -14,8 +22,8 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  background-color: var(--brand-white);
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 .title {
@@ -117,7 +125,6 @@
   letter-spacing: 0.1em;
 }
 
-
 /* Typography emphasis */
 
 /* Mobile responsiveness */
@@ -143,25 +150,4 @@
     align-items: flex-start;
     gap: 3rem;
   }
-
 }
-
-/* Dark mode */
-.dark .heroSection {
-  background-color: var(--brand-white);
-}
-
-.dark .title {
-  color: var(--brand-primary);
-}
-
-.dark .subtitle {
-  color: var(--brand-gray-medium);
-}
-
-.dark .ctaButton {
-  background-color: var(--brand-primary);
-  color: var(--brand-white);
-}
-
-
