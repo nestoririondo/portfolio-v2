@@ -58,7 +58,7 @@ export function Header() {
 
           <button onClick={scrollToContact} className={styles.contactButton}>
             <MessageCircle />
-            <div className={styles.contactText}>Contact</div>
+            <div className={styles.contactText}>{t("nav.contact")}</div>
           </button>
         </div>
       </div>
