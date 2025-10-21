@@ -6,13 +6,12 @@ import { Hero } from "./Body/Hero";
 import { ProblemRecognition } from "./Body/ProblemRecognition";
 import { Services } from "./Body/Services";
 import { useScrollHash } from "../hooks/useScrollHash";
-import styles from "../styles/components/Body.module.css";
 
 export const Body = () => {
   useScrollHash();
 
   return (
-    <main className={styles.main}>
+    <main>
       <Hero />
       <ProblemRecognition />
       <Services />
