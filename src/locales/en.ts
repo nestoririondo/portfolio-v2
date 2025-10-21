@@ -1,21 +1,14 @@
 export const en = {
   // Navigation
   'nav.home': 'Home',
-  'nav.services': 'Services',
-  'nav.about': 'About',
   'nav.contact': 'Contact',
-  'nav.problems': 'Problems',
   'nav.approach': 'Approach',
-  'nav.portfolio': 'Portfolio',
   
   // Hero Section
   'hero.title': 'Custom websites that actually work for your business',
   'hero.subtitle': 'When templates can\'t handle what you need—API integrations, custom features, and real solutions',
   'hero.cta': 'Let\'s talk about your project',
   'hero.status': 'Currently available for projects',
-  'hero.features.custom': 'Custom Code',
-  'hero.features.fast': 'Fast Delivery',
-  'hero.features.modern': 'Modern Design',
   
   // Problem Recognition
   'problems.title': 'Signs you\'ve outgrown your template',
@@ -28,7 +21,6 @@ export const en = {
   'problems.conclusion': 'If any of these sound familiar, it might be time for a custom solution.',
   
   // Services
-  'services.title': 'What I Offer',
   'services.custom.title': 'Custom Website Development',
   'services.custom.description': 'Build from scratch or redesign entirely—fast, modern, built for your specific needs',
   'services.api.title': 'API Integrations & Custom Features',
@@ -37,7 +29,6 @@ export const en = {
   'services.consulting.description': 'Audit your current site, identify problems, implement solutions that last',
   
   // Approach
-  'approach.title': 'My Approach',
   'approach.business.title': 'Business first, technology second',
   'approach.business.description': 'Your website should solve business problems, not just look good',
   'approach.communication.title': 'Clear communication, no jargon',
@@ -61,14 +52,7 @@ export const en = {
   'casestudy.image2.alt': 'Real estate property',
   
   // About
-  'about.title': 'About Me',
   'about.description1': 'I\'m a software developer working in the automation industry, where I lead technical teams building complex systems. I take on select web development projects because I enjoy hands-on coding and creative problem-solving.',
-  'about.description2': 'What I bring: professional development experience, understanding of business requirements, and the technical skill to build solutions that actually work.',
-  'about.skills.react': 'React',
-  'about.skills.typescript': 'TypeScript',
-  'about.skills.nodejs': 'Node.js',
-  'about.skills.apis': 'APIs',
-  'about.skills.design': 'Design Systems',
   
   // Contact
   'contact.title': 'Let\'s Talk About Your Project',
@@ -86,18 +70,11 @@ export const en = {
   // Footer
   'footer.copyright': 'Professional Web Development Services',
   'footer.nav.services': 'Services',
-  'footer.nav.portfolio': 'Portfolio',
   'footer.nav.about': 'About',
-  'footer.nav.contact': 'Contact',
   
   // Theme Toggle
-  'theme.light': 'Light Mode',
-  'theme.dark': 'Dark Mode',
   'theme.toggle': 'Toggle Theme',
   
   // Language Toggle
-  'language.english': 'English',
-  'language.german': 'German',
-  'language.spanish': 'Spanish',
   'language.toggle': 'Change Language'
 };

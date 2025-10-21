@@ -1,12 +1,8 @@
 export const es = {
   // Navigation
   "nav.home": "Inicio",
-  "nav.services": "Servicios",
-  "nav.about": "Sobre mí",
   "nav.contact": "Contacto",
-  "nav.problems": "Problemas",
   "nav.approach": "Enfoque",
-  "nav.portfolio": "Portafolio",
 
   // Hero Section
   "hero.title":
@@ -15,9 +11,6 @@ export const es = {
     "Cuando las plantillas no pueden manejar lo que necesitas—integraciones de API, características personalizadas y soluciones reales",
   "hero.cta": "Hablemos sobre tu proyecto",
   "hero.status": "Actualmente disponible para proyectos",
-  "hero.features.custom": "Código Personalizado",
-  "hero.features.fast": "Entrega Rápida",
-  "hero.features.modern": "Diseño Moderno",
 
   // Problem Recognition
   "problems.title": "Señales de que has superado tu plantilla",
@@ -32,7 +25,6 @@ export const es = {
     "Si alguno de estos te suena familiar, podría ser tiempo para una solución personalizada.",
 
   // Services
-  "services.title": "Lo que ofrezco",
   "services.custom.title": "Desarrollo Web Personalizado",
   "services.custom.description":
     "Construir desde cero o rediseñar completamente—rápido, moderno, construido para tus necesidades específicas",
@@ -44,7 +36,6 @@ export const es = {
     "Auditar tu sitio actual, identificar problemas, implementar soluciones que duren",
 
   // Approach
-  "approach.title": "Mi Enfoque",
   "approach.business.title": "Negocio primero, tecnología segundo",
   "approach.business.description":
     "Tu sitio web debe resolver problemas empresariales, no solo verse bien",
@@ -73,16 +64,8 @@ export const es = {
   "casestudy.image2.alt": "Propiedad inmobiliaria",
 
   // About
-  "about.title": "Sobre mí",
   "about.description1":
     "Soy un desarrollador de software que trabaja en la industria de automatización, donde lidero equipos técnicos construyendo sistemas complejos. Tomo proyectos selectos de desarrollo web porque disfruto la programación práctica y la resolución creativa de problemas.",
-  "about.description2":
-    "Lo que aporto: experiencia profesional en desarrollo, comprensión de requisitos empresariales y la habilidad técnica para construir soluciones que realmente funcionan.",
-  "about.skills.react": "React",
-  "about.skills.typescript": "TypeScript",
-  "about.skills.nodejs": "Node.js",
-  "about.skills.apis": "APIs",
-  "about.skills.design": "Sistemas de Diseño",
 
   // Contact
   "contact.title": "Hablemos sobre tu proyecto",
@@ -91,28 +74,20 @@ export const es = {
   "contact.form.email": "Email",
   "contact.form.company": "Empresa (Opcional)",
   "contact.form.message": "Cuéntame sobre tu proyecto",
-  "contact.form.placeholder": "¿Cuáles son tus objetivos, presupuesto y plazos?",
+  "contact.form.placeholder": "¿Cuál es tu objetivo, presupuesto y cronograma?",
   "contact.form.submit": "Enviar Mensaje",
   "contact.form.sending": "Enviando...",
   "contact.form.success": "¡Mensaje enviado! Responderé dentro de 24 horas.",
-  "contact.form.error":
-    "Error al enviar el mensaje. Por favor inténtalo de nuevo.",
+  "contact.form.error": "Error al enviar el mensaje. Por favor inténtalo de nuevo.",
 
   // Footer
   "footer.copyright": "Servicios Profesionales de Desarrollo Web",
   "footer.nav.services": "Servicios",
-  "footer.nav.portfolio": "Portafolio",
   "footer.nav.about": "Sobre mí",
-  "footer.nav.contact": "Contacto",
 
   // Theme Toggle
-  "theme.light": "Modo Claro",
-  "theme.dark": "Modo Oscuro",
   "theme.toggle": "Cambiar Tema",
 
   // Language Toggle
-  "language.english": "Inglés",
-  "language.german": "Alemán",
-  "language.spanish": "Español",
   "language.toggle": "Cambiar Idioma",
 };
