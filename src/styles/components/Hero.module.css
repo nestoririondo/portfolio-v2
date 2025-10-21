@@ -15,15 +15,7 @@
   align-items: flex-start;
   position: relative;
   background-color: var(--brand-white);
-  padding: 0 2rem;
   max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.content {
-  /* max-width: 800px; */
-  width: 100%;
 }
 
 .title {
