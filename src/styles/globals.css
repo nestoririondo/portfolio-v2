@@ -65,22 +65,6 @@
 }
 
 
-/* @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-body);
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-  }
-} */
-
-
 html {
   font-size: var(--font-size);
   scroll-behavior: smooth;
@@ -93,47 +77,6 @@ body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
-
-/* Ensure scroll snap works on all sections */
-/* section, footer {
-  scroll-snap-align: start !important;
-  scroll-snap-stop: always !important;
-  height: calc(100vh - 5rem) !important;
-  min-height: calc(100dvh - 5rem) !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  box-sizing: border-box;
-  position: relative;
-} */
-
-/* Mobile viewport adjustments */
-/* @media (max-width: 768px) {
-  section, footer {
-    min-height: 100svh !important;
-    height: auto !important;
-    padding: 2rem 1rem !important;
-    justify-content: flex-start !important;
-  }
-  
-  body {
-    height: 100svh;
-  }
-} */
-
-/* Chrome-specific fix for scroll snap overshooting */
-/* @supports (-webkit-appearance: none) and (not (-moz-appearance: none)) {
-  body, main {
-    scroll-snap-type: y proximity !important;
-  }
-  
-  section, footer {
-    scroll-snap-stop: normal !important;
-  }
-} */
-
-
-
 
 /* Smooth transitions for theme changes */
 * {
