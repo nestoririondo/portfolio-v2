@@ -118,6 +118,183 @@
   border-color: rgba(0, 0, 0, 0.15);
 }
 
+/* Error states with animations */
+.formGroup {
+  transition: border-color 0.3s ease-in;
+}
+
+.formGroup.error {
+  border-color: #d05454 !important;
+  animation: errorPulse 0.5s ease-in;
+}
+
+.formGroup.errorFadeOut {
+  animation: errorFadeOut 0.5s ease-out forwards;
+}
+
+.formGroup.errorFadeOut .label {
+  animation: errorLabelFadeOut 0.5s ease-out forwards;
+}
+
+.inputError.errorFadeOut {
+  animation: errorInputFadeOut 0.5s ease-out forwards;
+}
+
+.label {
+  transition: all 0.3s ease-in;
+}
+
+.formGroup.error .label {
+  background-color: #d05454 !important;
+  color: white !important;
+  animation: errorLabelPulse 0.5s ease-in;
+}
+
+.input,
+.textarea {
+  transition: all 0.3s ease-in;
+}
+
+.inputError {
+  border-color: #dc2626 !important;
+  background-color: rgba(220, 38, 38, 0.05) !important;
+  animation: errorInputPulse 0.5s ease-in;
+}
+
+.inputError:focus {
+  border-color: #dc2626 !important;
+  background-color: rgba(220, 38, 38, 0.08) !important;
+}
+
+/* Error animations */
+@keyframes errorPulse {
+  0% {
+    border-color: var(--brand-primary);
+    transform: scale(1);
+  }
+  50% {
+    border-color: #dc2626;
+    transform: scale(1.02);
+  }
+  100% {
+    border-color: #dc2626;
+    transform: scale(1);
+  }
+}
+
+@keyframes errorLabelPulse {
+  0% {
+    background-color: var(--brand-gray-light);
+    color: var(--brand-gray-medium);
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  100% {
+    background-color: #dc2626;
+    color: white;
+    transform: translateX(0);
+  }
+}
+
+@keyframes errorInputPulse {
+  0% {
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.02);
+    box-shadow: none;
+  }
+  50% {
+    border-color: #dc2626;
+    background-color: rgba(220, 38, 38, 0.1);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+  }
+  100% {
+    border-color: #dc2626;
+    background-color: rgba(220, 38, 38, 0.05);
+    box-shadow: none;
+  }
+}
+
+/* Fade out animations */
+@keyframes errorFadeOut {
+  0% {
+    border-color: #dc2626;
+  }
+  100% {
+    border-color: var(--brand-primary);
+  }
+}
+
+@keyframes errorLabelFadeOut {
+  0% {
+    background-color: #dc2626;
+    color: white;
+  }
+  100% {
+    background-color: var(--brand-gray-light);
+    color: var(--brand-gray-medium);
+  }
+}
+
+@keyframes errorInputFadeOut {
+  0% {
+    border-color: #dc2626;
+    background-color: rgba(220, 38, 38, 0.05);
+  }
+  100% {
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+}
+
+.chipsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.chip {
+  background-color: var(--brand-white);
+  color: var(--brand-primary);
+  border: 2px solid var(--brand-primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.chip:hover {
+  background-color: var(--brand-primary);
+  color: var(--brand-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chip.selected {
+  background-color: var(--brand-accent);
+  color: var(--brand-white);
+  border-color: var(--brand-accent);
+  box-shadow: 4px 4px 0 var(--brand-primary);
+}
+
+.chip.selected:hover {
+  background-color: var(--brand-accent);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--brand-primary);
+}
+
 .ctaButton {
   width: 100%;
   background-color: #000000 !important;
@@ -166,6 +343,33 @@
   background-color: var(--brand-gray-medium) !important;
   border-color: var(--brand-gray-medium) !important;
   color: var(--brand-gray-light) !important;
+}
+
+.toastSuccess {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.checkmarkContainer {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.checkmarkContainer svg {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
 }
 
 /* Footer integrated into contact section */

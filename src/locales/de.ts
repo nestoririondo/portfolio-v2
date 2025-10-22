@@ -79,12 +79,19 @@ export const de = {
   "contact.form.email": "E-Mail",
   "contact.form.company": "Unternehmen (Optional)",
   "contact.form.message": "Erzähl mir von deinem Projekt",
-  "contact.form.placeholder": "Was ist dein Ziel, Budget und Zeitplan?",
+  "contact.form.placeholder": "Beschreibe deine aktuellen Website-Herausforderungen und wie Erfolg aussehen würde",
+  "contact.form.price": "Budget-Bereich",
+  "contact.form.price.option1": "Unter €1.000",
+  "contact.form.price.option2": "€1.000 - €3.000",
+  "contact.form.price.option3": "€3.000 - €8.000",
+  "contact.form.price.option4": "Über €8.000",
   "contact.form.submit": "Nachricht senden",
   "contact.form.sending": "Wird gesendet...",
   "contact.form.success":
     "Nachricht gesendet! Ich antworte innerhalb von 24 Stunden.",
-  "contact.form.error": "Fehler beim Senden der Nachricht. Bitte versuche es erneut.",
+  "contact.form.error":
+    "Fehler beim Senden der Nachricht. Bitte versuche es erneut.",
+  "contact.form.validation": "Bitte fülle alle Pflichtfelder aus.",
 
   // Footer
   "footer.copyright": "Professionelle Webentwicklungs-Dienstleistungen",

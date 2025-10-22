@@ -78,11 +78,17 @@ export const es = {
   "contact.form.email": "Email",
   "contact.form.company": "Empresa (Opcional)",
   "contact.form.message": "Cuéntame sobre tu proyecto",
-  "contact.form.placeholder": "¿Cuál es tu objetivo, presupuesto y cronograma?",
+  "contact.form.placeholder": "Describe los desafíos actuales de tu sitio web y qué significaría el éxito",
+  "contact.form.price": "Rango de Presupuesto",
+  "contact.form.price.option1": "Menos de €1.000",
+  "contact.form.price.option2": "€1.000 - €3.000",
+  "contact.form.price.option3": "€3.000 - €8.000",
+  "contact.form.price.option4": "Más de €8.000",
   "contact.form.submit": "Enviar Mensaje",
   "contact.form.sending": "Enviando...",
   "contact.form.success": "¡Mensaje enviado! Responderé dentro de 24 horas.",
   "contact.form.error": "Error al enviar el mensaje. Por favor inténtalo de nuevo.",
+  "contact.form.validation": "Por favor completa todos los campos obligatorios.",
 
   // Footer
   "footer.copyright": "Servicios Profesionales de Desarrollo Web",
