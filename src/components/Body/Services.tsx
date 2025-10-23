@@ -30,7 +30,7 @@ export function Services() {
   const { t } = useLanguage();
 
   return (
-    <section id="services" className={styles.section}>
+    <section id="services" className="section">
       <div className={styles.container}>
         <motion.div
           className={styles.titleSection}

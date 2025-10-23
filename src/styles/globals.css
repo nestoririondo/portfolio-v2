@@ -4,7 +4,7 @@
   --font-heading: "Inter", system-ui, -apple-system, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
-  
+
   /* Brand Colors */
   --brand-primary: #000000;
   --brand-white: #ffffff;
@@ -12,6 +12,9 @@
   --brand-gray-light: #f5f5f5;
   --brand-gray-medium: #666666;
   --brand-gray-dark: #333333;
+
+  /* Header Height */
+  --header-height: 5rem;
 }
 
 /* Dark mode support */
@@ -59,14 +62,27 @@ a {
 }
 
 /* Remove default list styles */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
 /* Form elements */
-input, textarea {
+input,
+textarea {
   font-family: inherit;
   font-size: inherit;
+}
+
+.section {
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--brand-gray-light);
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 /* Scrollbar styling */

@@ -1,19 +1,7 @@
-/* BRUTALIST ABOUT SECTION */
-.section {
-  height: 100vh;
-  min-height: 100vh;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--brand-gray-light);
-  padding: 2rem;
-  position: relative;
-}
-
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding-top: calc(var(--header-height) + 4rem);
 }
 
 .titleSection {

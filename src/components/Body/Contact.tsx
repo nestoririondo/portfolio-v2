@@ -192,7 +192,7 @@ export function Contact() {
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
     >
-      <section id="contact" className={styles.section}>
+      <section id="contact" className="section">
         <div className={styles.container}>
           <motion.div
             className={styles.titleSection}

@@ -1,4 +1,4 @@
-import { ImageWithFallback } from "../ImageWithFallback";
+import { ImageWithFallback } from "../ui/ImageWithFallback";
 import { CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../../contexts/LanguageContext";
@@ -8,7 +8,7 @@ export function CaseStudy() {
   const { t } = useLanguage();
   
   return (
-    <section id="case-study" className={styles.section}>
+    <section id="case-study" className="section">
       <div className={styles.container}>
         <motion.div
           className={styles.titleSection}

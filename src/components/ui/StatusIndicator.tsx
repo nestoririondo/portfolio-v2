@@ -1,4 +1,4 @@
-import styles from "../styles/components/StatusIndicator.module.css";
+import styles from "../../styles/components/StatusIndicator.module.css";
 
 export function StatusIndicator() {
   return (

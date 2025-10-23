@@ -1,7 +1,7 @@
 import { Globe, MessageCircle } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { CircleBlurThemeToggle } from "./CircleBlurThemeToggle";
+import { CircleBlurThemeToggle } from "./ui/CircleBlurThemeToggle";
 import { scrollToContact, scrollToTop } from "../utils/scroll";
 import styles from "../styles/components/Header.module.css";
 
@@ -12,9 +12,8 @@ export function Header() {
     const languages = ["en", "de", "es"] as const;
     const currentIndex = languages.indexOf(language as any);
     const nextIndex = (currentIndex + 1) % languages.length;
-    setLanguage(languages[nextIndex] as any);
+    setLanguage(languages[nextIndex]);
   };
-
 
   return (
     <motion.header
@@ -39,10 +38,7 @@ export function Header() {
             {language.toUpperCase()}
           </button>
 
-          <CircleBlurThemeToggle 
-            start="center"
-            title={t("theme.toggle")}
-          />
+          <CircleBlurThemeToggle start="center" title={t("theme.toggle")} />
 
           <button onClick={scrollToContact} className={styles.contactButton}>
             <MessageCircle />

@@ -1,13 +1,12 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { StatusIndicator } from "../StatusIndicator";
+import { StatusIndicator } from "../ui/StatusIndicator";
 import { scrollToContact } from "../../utils/scroll";
 import styles from "../../styles/components/Hero.module.css";
 
 export function Hero() {
   const { t } = useLanguage();
-
 
   return (
     <div className={styles.heroWrapper}>

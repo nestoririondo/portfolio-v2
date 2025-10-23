@@ -1,22 +1,10 @@
-/* BRUTALIST CONTACT SECTION */
-.section {
-  min-height: 100vh;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--brand-white);
-  overflow-y: auto;
-}
-
 .container {
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 2rem;
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: calc(var(--header-height) + 4rem);
 }
 
 .titleSection {

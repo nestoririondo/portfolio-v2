@@ -7,7 +7,7 @@
   z-index: 1000;
   background-color: var(--brand-white);
   border-bottom: 4px solid var(--brand-primary);
-  height: 80px;
+  height: var(--header-height);
   box-shadow: none;
 }
 

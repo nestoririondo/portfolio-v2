@@ -34,7 +34,7 @@ export function Approach() {
   const { t } = useLanguage();
 
   return (
-    <section id="approach" className={styles.section}>
+    <section id="approach" className="section">
       <div className={styles.container}>
         <motion.div
           className={styles.titleSection}

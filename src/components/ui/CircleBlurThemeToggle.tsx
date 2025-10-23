@@ -1,9 +1,14 @@
 import { Moon, Sun } from "lucide-react";
 import { useCallback } from "react";
-import { useTheme } from "../contexts/ThemeContext";
-import styles from "../styles/components/Header.module.css";
+import { useTheme } from "../../contexts/ThemeContext";
+import styles from "../../styles/components/Header.module.css";
 
-type StartPosition = 'center' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+type StartPosition =
+  | "center"
+  | "top-left"
+  | "top-right"
+  | "bottom-left"
+  | "bottom-right";
 
 interface CircleBlurThemeToggleProps {
   start?: StartPosition;
@@ -11,30 +16,32 @@ interface CircleBlurThemeToggleProps {
   title?: string;
 }
 
-export function CircleBlurThemeToggle({ 
-  start = 'center', 
+export function CircleBlurThemeToggle({
+  start = "center",
   className,
-  title 
+  title,
 }: CircleBlurThemeToggleProps) {
   const { theme, toggleThemeWithTransition } = useTheme();
 
   const handleClick = useCallback(() => {
     const animationFn = () => {
       const styleId = `theme-transition-${Date.now()}`;
-      const style = document.createElement('style');
+      const style = document.createElement("style");
       style.id = styleId;
-      
+
       const positions = {
-        center: 'center',
-        'top-left': 'top left',
-        'top-right': 'top right',
-        'bottom-left': 'bottom left',
-        'bottom-right': 'bottom right',
+        center: "center",
+        "top-left": "top left",
+        "top-right": "top right",
+        "bottom-left": "bottom left",
+        "bottom-right": "bottom right",
       };
 
-      const cx = start === 'center' ? '50' : start.includes('left') ? '0' : '100';
-      const cy = start === 'center' ? '50' : start.includes('top') ? '0' : '100';
-      
+      const cx =
+        start === "center" ? "50" : start.includes("left") ? "0" : "100";
+      const cy =
+        start === "center" ? "50" : start.includes("top") ? "0" : "100";
+
       const css = `
         @supports (view-transition-name: root) {
           ::view-transition-old(root) { 
@@ -57,10 +64,10 @@ export function CircleBlurThemeToggle({
           }
         }
       `;
-      
+
       style.textContent = css;
       document.head.appendChild(style);
-      
+
       setTimeout(() => {
         const styleEl = document.getElementById(styleId);
         if (styleEl) {
@@ -75,11 +82,11 @@ export function CircleBlurThemeToggle({
   return (
     <button
       onClick={handleClick}
-      className={`${styles.iconButton} ${className || ''}`}
+      className={`${styles.iconButton} ${className || ""}`}
       title={title}
-      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
     >
-      {theme === 'light' ? <Moon /> : <Sun />}
+      {theme === "light" ? <Moon /> : <Sun />}
     </button>
   );
 }

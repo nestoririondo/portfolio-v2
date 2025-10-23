@@ -1,5 +1,4 @@
 .section {
-  height: 100dvh;
   min-height: 100dvh;
   scroll-snap-align: start;
   display: flex;
@@ -12,10 +11,10 @@
 }
 
 .container {
-  max-width: 75rem;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  z-index: 10;
+  padding-top: calc(var(--header-height) + 4rem);
 }
 
 .titleSection {
@@ -162,7 +161,7 @@
 }
 
 .conclusionBox::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -4px;
   left: -4px;
@@ -221,19 +220,19 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
-  
+
   .problemCard {
     border-width: 5px;
   }
-  
+
   .problemHeader {
     border-bottom-width: 5px;
   }
-  
+
   .problemBorder {
     border-width: 5px;
   }
-  
+
   .conclusionBox {
     border-width: 5px;
   }

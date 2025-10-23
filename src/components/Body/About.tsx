@@ -1,6 +1,6 @@
 import { useLanguage } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { StatusIndicator } from "../StatusIndicator";
+import { StatusIndicator } from "../ui/StatusIndicator";
 import { SKILLS } from "../../constants/skills";
 import styles from "../../styles/components/About.module.css";
 
@@ -8,7 +8,7 @@ export function About() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className={styles.section}>
+    <section id="about" className="section">
       <div className={styles.container}>
         <motion.div
           className={styles.titleSection}
@@ -28,20 +28,17 @@ export function About() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className={styles.imageSection}>
-            <div className={styles.profileImage}>
-              NI
-            </div>
+            <div className={styles.profileImage}>NI</div>
             <div className={styles.profileLabel}>
-              {t("about.profile.role")}<br/>
+              {t("about.profile.role")}
+              <br />
               {t("about.profile.location")}
             </div>
           </div>
 
           <div className={styles.textSection}>
-            <p className={styles.description}>
-              {t("about.description1")}
-            </p>
-            
+            <p className={styles.description}>{t("about.description1")}</p>
+
             <div className={styles.skillsContainer}>
               {SKILLS.map((skill, index) => (
                 <span key={index} className={styles.skillBadge}>
@@ -52,9 +49,7 @@ export function About() {
 
             <div className={styles.statusRow}>
               <StatusIndicator />
-              <span className={styles.statusText}>
-                {t("about.status")}
-              </span>
+              <span className={styles.statusText}>{t("about.status")}</span>
             </div>
           </div>
         </motion.div>
